@@ -17,10 +17,16 @@
 
     <section>
         <div class="form-container">
-            <form>
+            <form id="loginForm">
                 <h2>Log In</h2>
-                <input type="email" name="email" placeholder="Enter Your Email" required>
-                <input type="password" name="password" placeholder="Enter Your Password" required>
+                <input type="text" name="identifier" placeholder="Enter Your Username or Email" required>
+
+                <!-- Password input with eye icon for toggle -->
+                <div class="inputbox">
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+                    <img src="Images/eye-close.png" id="eyeicon" alt="toggle visibility">
+                </div>
+
                 <button type="submit">Log In</button>
 
                 <!-- Option to Create a New Account -->
@@ -35,5 +41,46 @@
         <div id="footer">
         </div>
     </footer>
+
+    <!-- JavaScript for password toggle -->
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+        eyeicon.onclick = function() {
+            if (password.type === "password") {
+                password.type = "text";
+                eyeicon.src = "Images/eye-open.png"; // Update to the open eye image
+            } else {
+                password.type = "password";
+                eyeicon.src = "Images/eye-close.png"; // Update to the closed eye image
+            }
+        }
+
+        // JavaScript for handling login form submission
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            const identifier = document.querySelector('input[name="identifier"]').value; // Username or Email
+            const password = document.getElementById('password').value; // Password
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ identifier, password })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert(data.message); // Successful login message
+                // Optionally redirect to another page after successful login
+                window.location.href = 'dashboard.html'; // Change this to your desired page
+            } else {
+                alert(data.message); // Display error message
+            }
+        });
+    </script>
 </body>
 </html>

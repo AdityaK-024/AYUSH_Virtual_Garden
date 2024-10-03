@@ -27,13 +27,6 @@ body {
     height: 80vh;
 }
 
-form {
-    background-color: #1a1a1a;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
-}
-
 form h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -54,18 +47,6 @@ input:focus {
     background-color: #555;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #004d4d;
-    border: none;
-    border-radius: 8px;
-    color: #f2f2f2;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
 button:hover {
     background-color: #006666;
 }
@@ -77,3 +58,62 @@ button:hover {
     background-color: #004d4d;
     color: #f2f2f2;
 }
+/* Styling for input fields (email and password) */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #f2f2f2;
+    box-sizing: border-box; /* Ensure padding and width are calculated properly */
+}
+
+input:focus {
+    outline: none;
+    background-color: #555;
+}
+
+/* Styling for password input container */
+.inputbox {
+    position: relative;
+    width: 100%;
+}
+
+.inputbox input[type="password"] {
+    padding-right: 40px; /* Ensure space for the eye icon */
+}
+
+/* Eye icon styling */
+.inputbox img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Make the eye icon smaller */
+    cursor: pointer;
+}
+
+/* Adjust form padding to ensure equal spacing */
+form {
+    background-color: #1a1a1a;
+    padding: 30px 40px; /* Add more padding on the sides for better spacing */
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Button spacing and layout */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #004d4d;
+    border: none;
+    border-radius: 8px;
+    color: #f2f2f2;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+

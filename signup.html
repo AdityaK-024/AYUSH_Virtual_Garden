@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush | Create Account</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <h1>Ayush</h1>
+        </nav>
+    </header>
+
+    <section>
+        <div class="form-container">
+            <form id="signupForm">
+                <h2>Create Account</h2>
+                <label for="name">Enter Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Name" required>
+
+                <label for="email">Enter E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Enter E-mail" required>
+
+                <label for="DOB">Enter Date of Birth</label>
+                <input type="date" name="DOB" id="DOB" placeholder="Enter Date of Birth" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="password">Enter a Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password"
+                    pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" required>
+
+                <label for="repassword">Confirm Password</label>
+                <input type="password" name="repassword" id="repassword" placeholder="Confirm Password"
+                    pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" required>
+
+                <div class="wrap">
+                    <button type="submit">Submit</button>
+                </div>
+
+                <p><a href="login.html">Already have an Account? Login here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer">
+        </div>
+    </footer>
+
+    <!-- JavaScript for handling signup form submission -->
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const DOB = document.getElementById('DOB').value;
+            const gender = document.getElementById('gender').value;
+            const password = document.getElementById('password').value;
+            const repassword = document.getElementById('repassword').value;
+
+            // Check if passwords match
+            if (password !== repassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, DOB, gender, password })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert(data.message); // Successful signup message
+                // Optionally redirect to the login page after successful signup
+                window.location.href = 'login.html'; // Change this to your desired page
+            } else {
+                alert(data.message); // Display error message
+            }
+        });
+    </script>
+</body>
+</html>

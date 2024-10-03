@@ -1,0 +1,85 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #f2f2f2;
+}
+
+/* Navbar Styling */
+#navbar {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d4d;
+}
+
+#navbar h1 {
+    color: #f2f2f2;
+    margin: 0;
+}
+
+/* Main Container Styling */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+form {
+    background-color: #1a1a1a;
+    padding: 20px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    width: 300px; /* Set a fixed width for the form */
+    margin: 0 auto; /* Center the form */
+}
+
+/* Form Header Styling */
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Fields Styling */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #f2f2f2;
+    box-sizing: border-box; /* Ensure padding and width are calculated properly */
+}
+
+input:focus, select:focus {
+    outline: none;
+    background-color: #555;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #004d4d;
+    border: none;
+    border-radius: 8px;
+    color: #f2f2f2;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #006666;
+}
+
+/* Footer Styling */
+#footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d4d;
+    color: #f2f2f2;
+}
