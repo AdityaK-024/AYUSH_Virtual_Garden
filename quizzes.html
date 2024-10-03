@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYUSH Quizzes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Popup styling */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .start-quiz-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #004d4d;
+    border: none;
+    border-radius: 8px;
+    color: #f2f2f2;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.start-quiz-btn:hover {
+    background-color: #006666;
+    transform: scale(1.05); /* Adds a slight scaling effect on hover */
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Medicinal Plants</a>
+        <a href="#">Quizzes</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="login.html">Log in</a>
+    </nav>
+
+    <!-- Quiz Cards -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2>Quizzes</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="Images/tulsi.jpg" alt="Tulsi">
+                    <div class="card-content">
+                        <h3>Tulsi Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openPopup('popup1')">Start Quiz</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images/neem.jpg" alt="Neem">
+                    <div class="card-content">
+                        <h3>Neem Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openPopup('popup2')">Start Quiz</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images/ashwagandha.jpg" alt="Ashwagandha">
+                    <div class="card-content">
+                        <h3>Ashwagandha Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openPopup('popup3')">Start Quiz</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images/aloevera.jpg" alt="Aloe Vera">
+                    <div class="card-content">
+                        <h3>Aloe Vera Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openPopup('popup4')">Start Quiz</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images/brahmi.jpg" alt="Brahmi">
+                    <div class="card-content">
+                        <h3>Brahmi Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openPopup('popup5')">Start Quiz</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images/turmeric.jpg" alt="Turmeric">
+                    <div class="card-content">
+                        <h3>Turmeric Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openPopup('popup6')">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup for Quiz -->
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <h3>Tulsi Quiz</h3>
+            <p>Quiz content goes here.</p>
+            <button class="close-btn" onclick="closePopup('popup1')">Close</button>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <h3>Neem Quiz</h3>
+            <p>Quiz content goes here.</p>
+            <button class="close-btn" onclick="closePopup('popup2')">Close</button>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <h3>Ashwagandha Quiz</h3>
+            <p>Quiz content goes here.</p>
+            <button class="close-btn" onclick="closePopup('popup3')">Close</button>
+        </div>
+    </div>
+
+    <div id="popup4" class="popup">
+        <div class="popup-content">
+            <h3>Aloe Vera Quiz</h3>
+            <p>Quiz content goes here.</p>
+            <button class="close-btn" onclick="closePopup('popup4')">Close</button>
+        </div>
+    </div>
+
+    <div id="popup5" class="popup">
+        <div class="popup-content">
+            <h3>Brahmi Quiz</h3>
+            <p>Quiz content goes here.</p>
+            <button class="close-btn" onclick="closePopup('popup5')">Close</button>
+        </div>
+    </div>
+
+    <div id="popup6" class="popup">
+        <div class="popup-content">
+            <h3>Turmeric Quiz</h3>
+            <p>Quiz content goes here.</p>
+            <button class="close-btn" onclick="closePopup('popup6')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(popupId) {
+            document.getElementById(popupId).style.display = 'block';
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
