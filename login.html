@@ -39,21 +39,18 @@
 
     <footer>
         <div id="footer">
+            <p>&copy; 2024 Ayush. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- JavaScript for password toggle -->
     <script>
-        let eyeicon = document.getElementById("eyeicon");
-        let password = document.getElementById("password");
+        const eyeicon = document.getElementById("eyeicon");
+        const password = document.getElementById("password");
         eyeicon.onclick = function() {
-            if (password.type === "password") {
-                password.type = "text";
-                eyeicon.src = "Images/eye-open.png"; // Update to the open eye image
-            } else {
-                password.type = "password";
-                eyeicon.src = "Images/eye-close.png"; // Update to the closed eye image
-            }
+            const isPassword = password.type === "password";
+            password.type = isPassword ? "text" : "password";
+            eyeicon.src = isPassword ? "Images/eye-open.png" : "Images/eye-close.png"; // Update to the correct image
         }
 
         // JavaScript for handling login form submission
@@ -75,10 +72,11 @@
 
             if (response.ok) {
                 alert(data.message); // Successful login message
-                // Optionally redirect to another page after successful login
-                window.location.href = 'dashboard.html'; // Change this to your desired page
+                window.location.href = 'index.html'; // Change this to your desired page
             } else {
                 alert(data.message); // Display error message
+                // Optionally clear the password field after error
+                document.getElementById('password').value = '';
             }
         });
     </script>
