@@ -1,6 +1,6 @@
 # Node modules
 node_modules/
-
+server.js
 # Logs
 *.log
 
@@ -10,4 +10,3 @@ node_modules/
 # OS files
 .DS_Store
 Thumbs.db
-server.js
