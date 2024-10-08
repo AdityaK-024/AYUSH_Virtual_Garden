@@ -5,64 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH Quizzes</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Popup styling */
-        .popup {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .popup-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: black;
-            padding: 20px;
-            border-radius: 5px;
-            width: 80%;
-            max-width: 500px;
-            color: white; /* Change text color to white for better visibility */
-        }
-        .close-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .start-quiz-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #004d4d;
-            border: none;
-            border-radius: 8px;
-            color: #f2f2f2;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .start-quiz-btn:hover {
-            background-color: #006666;
-            transform: scale(1.05); /* Adds a slight scaling effect on hover */
-        }
-        /* Quiz styling */
-        .quiz {
-            display: none; /* Hide quiz initially */
-            margin-top: 20px; /* Add space above quiz */
-        }
-        .btn {
-            margin-top: 10px;
-        }
-        #next-btn {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 
@@ -76,182 +18,88 @@
         <a href="login.html">Log in</a>
     </nav>
 
-    <!-- Quiz Cards -->
-    <section class="quiz-section">
+    <!-- Quizzes Section -->
+    <section class="about-section">
         <div class="container">
+            <h2>Quizzes</h2>
             <div class="card-container">
                 <div class="card">
-                    <img src="Images/tulsi.jpg" alt="Tulsi">
+                    <img src="Images/tulsi.jpg" alt="Tulsi Quiz">
                     <div class="card-content">
-                        <h3>Tulsi</h3>
-                        <button class="start-quiz-btn" onclick="openPopup('popup1')">Start Quiz</button>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="Images/neem.jpg" alt="Neem">
-                    <div class="card-content">
-                        <h3>Neem</h3>
-                        <button class="start-quiz-btn" onclick="openPopup('popup2')">Start Quiz</button>
+                        <h3>Tulsi Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openQuizPopup('Tulsi Quiz')">Start Quiz</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/ashwagandha.jpg" alt="Ashwagandha">
+                    <img src="Images/neem.jpg" alt="Neem Quiz">
                     <div class="card-content">
-                        <h3>Ashwagandha</h3>
-                        <button class="start-quiz-btn" onclick="openPopup('popup3')">Start Quiz</button>
+                        <h3>Neem Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openQuizPopup('Neem Quiz')">Start Quiz</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/aloevera.jpg" alt="Aloe Vera">
+                    <img src="Images/ashwagandha.jpg" alt="Ashwagandha Quiz">
                     <div class="card-content">
-                        <h3>Aloe Vera</h3>
-                        <button class="start-quiz-btn" onclick="openPopup('popup4')">Start Quiz</button>
+                        <h3>Ashwagandha Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openQuizPopup('Ashwagandha Quiz')">Start Quiz</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/brahmi.jpg" alt="Brahmi">
+                    <img src="Images/aloevera.jpg" alt="Aloe Vera Quiz">
                     <div class="card-content">
-                        <h3>Brahmi</h3>
-                        <button class="start-quiz-btn" onclick="openPopup('popup5')">Start Quiz</button>
+                        <h3>Aloe Vera Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openQuizPopup('Aloe Vera Quiz')">Start Quiz</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/turmeric.jpg" alt="Turmeric">
+                    <img src="Images/brahmi.jpg" alt="Brahmi Quiz">
                     <div class="card-content">
-                        <h3>Turmeric</h3>
-                        <button class="start-quiz-btn" onclick="openPopup('popup6')">Start Quiz</button>
+                        <h3>Brahmi Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openQuizPopup('Brahmi Quiz')">Start Quiz</button>
                     </div>
                 </div>
-                <!-- Add more cards as needed -->
+                <div class="card">
+                    <img src="Images/turmeric.jpg" alt="Turmeric Quiz">
+                    <div class="card-content">
+                        <h3>Turmeric Quiz</h3>
+                        <button class="start-quiz-btn" onclick="openQuizPopup('Turmeric Quiz')">Start Quiz</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Popups for each Quiz -->
-    <div id="popup1" class="popup">
+    <!-- Popup Modal for Quizzes -->
+    <div id="quiz-popup" class="popup" style="display: none;">
         <div class="popup-content">
-            <h3>Tulsi Quiz</h3>
-            <div class="quiz">
-                <h2 id="question1">Question Goes Here</h2>
-                <div id="answer-buttons1">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
-                <button id="next-btn1">Next</button>
-            </div>
-            <button class="close-btn" onclick="closePopup('popup1')">Close</button>
+            <span class="close-btn" onclick="closeQuizPopup()">&times;</span>
+            <h3 id="quiz-popup-title">Quiz Title</h3>
+            <p id="quiz-question">Question will be displayed here...</p>
+            <div id="quiz-options"></div>
+            <button class="start-quiz-btn" onclick="proceedToQuiz()">Start</button>
         </div>
     </div>
 
-    <div id="popup2" class="popup">
-        <div class="popup-content">
-            <h3>Neem Quiz</h3>
-            <div class="quiz">
-                <h2 id="question2">Question Goes Here</h2>
-                <div id="answer-buttons2">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
-                <button id="next-btn2">Next</button>
-            </div>
-            <button class="close-btn" onclick="closePopup('popup2')">Close</button>
-        </div>
-    </div>
-
-    <div id="popup3" class="popup">
-        <div class="popup-content">
-            <h3>Ashwagandha Quiz</h3>
-            <div class="quiz">
-                <h2 id="question3">Question Goes Here</h2>
-                <div id="answer-buttons3">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
-                <button id="next-btn3">Next</button>
-            </div>
-            <button class="close-btn" onclick="closePopup('popup3')">Close</button>
-        </div>
-    </div>
-
-    <div id="popup4" class="popup">
-        <div class="popup-content">
-            <h3>Aloe Vera Quiz</h3>
-            <div class="quiz">
-                <h2 id="question4">Question Goes Here</h2>
-                <div id="answer-buttons4">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
-                <button id="next-btn4">Next</button>
-            </div>
-            <button class="close-btn" onclick="closePopup('popup4')">Close</button>
-        </div>
-    </div>
-
-    <div id="popup5" class="popup">
-        <div class="popup-content">
-            <h3>Brahmi Quiz</h3>
-            <div class="quiz">
-                <h2 id="question5">Question Goes Here</h2>
-                <div id="answer-buttons5">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
-                <button id="next-btn5">Next</button>
-            </div>
-            <button class="close-btn" onclick="closePopup('popup5')">Close</button>
-        </div>
-    </div>
-
-    <div id="popup6" class="popup">
-        <div class="popup-content">
-            <h3>Turmeric Quiz</h3>
-            <div class="quiz">
-                <h2 id="question6">Question Goes Here</h2>
-                <div id="answer-buttons6">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
-                <button id="next-btn6">Next</button>
-            </div>
-            <button class="close-btn" onclick="closePopup('popup6')">Close</button>
-        </div>
-    </div>
-
+    <script src="quizzes.js"></script>
     <script>
-     function openPopup() {
-    const popup = document.getElementById('popup1');
-    popup.style.display = 'block';
-    displayQuestion(); // Ensure this is called
-}
+        // Function to open quiz popup
+        function openQuizPopup(quizTitle) {
+            document.getElementById("quiz-popup-title").innerText = quizTitle;
+            document.getElementById("quiz-popup").style.display = "block";
+            startQuiz(quizTitle.replace(' Quiz', ''));
+        }
 
+        // Function to close quiz popup
+        function closeQuizPopup() {
+            document.getElementById("quiz-popup").style.display = "none";
+        }
 
-function closePopup(popupId) {
-    const popup = document.getElementById(popupId);
-    popup.style.display = 'none'; // Hide the popup
-
-    // Hide the quiz element inside the popup, if it exists
-    const quiz = popup.querySelector('.quiz'); 
-    if (quiz) {
-        quiz.style.display = 'none'; // Hide the quiz element
-    }
-}
-
-
-        // Add any additional JavaScript functionality here as needed
+        // Function to initiate quiz
+        function proceedToQuiz() {
+            const title = document.getElementById("quiz-popup-title").innerText;
+            startQuiz(title.replace(' Quiz', ''));
+        }
     </script>
+
 </body>
 </html>
