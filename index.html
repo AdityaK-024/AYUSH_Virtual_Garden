@@ -1,10 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH Website</title>
-    <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="style.css">
+       
 </head>
 <body>
 
@@ -32,51 +33,82 @@
         <div class="container">
             <h2>Medicinal Plants</h2>
             <div class="card-container">
-                <div class="card">
+                <div class="card" onclick="showModal('Tulsi', 'Known for its medicinal properties, Tulsi is used to treat colds, coughs, and respiratory issues.', 'Images/tulsi.jpg')">
                     <img src="Images/tulsi.jpg" alt="Tulsi">
                     <div class="card-content">
                         <h3>Tulsi (Holy Basil)</h3>
-                        <p>Known for its medicinal properties, Tulsi is used to treat colds, coughs, and respiratory issues.</p>
+                        <p>Known for its medicinal properties.</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/neem.jpg" alt="Neem">
+                <div class="card" onclick="showModal('Neem', 'Neem is used for skin care and to improve digestion. Its antibacterial properties are highly valued.', 'Images/neem.jpg')">
+                    <img src="Images/neem.jpg" alt="Neem">
                     <div class="card-content">
                         <h3>Neem</h3>
-                        <p>Neem is used for skin care and to improve digestion. Its antibacterial properties are highly valued.</p>
+                        <p>Used for skin care and digestion.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="showModal('Ashwagandha', 'Ashwagandha is used for its stress-relieving and energy-boosting properties.', 'Images/ashwagandha.jpg')">
                     <img src="Images/ashwagandha.jpg" alt="Ashwagandha">
                     <div class="card-content">
                         <h3>Ashwagandha</h3>
-                        <p>Ashwagandha is used for its stress-relieving and energy-boosting properties.</p>
+                        <p>Used for stress relief and energy.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="showModal('Aloe Vera', 'Aloe Vera is used in skincare and for treating burns and improving digestion.', 'Images/aloevera.jpg')">
                     <img src="Images/aloevera.jpg" alt="Aloe Vera">
                     <div class="card-content">
                         <h3>Aloe Vera</h3>
-                        <p>Aloe Vera is used in skincare and for treating burns and improving digestion.</p>
+                        <p>Used in skincare and burns treatment.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="showModal('Brahmi', 'Brahmi is known for enhancing memory and cognitive abilities, used in Ayurvedic medicines.', 'Images/brahmi.jpg')">
                     <img src="Images/brahmi.jpg" alt="Brahmi">
                     <div class="card-content">
                         <h3>Brahmi</h3>
-                        <p>Brahmi is known for enhancing memory and cognitive abilities, used in Ayurvedic medicines.</p>
+                        <p>Enhances memory and cognition.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="showModal('Turmeric', 'Turmeric is an anti-inflammatory and antioxidant commonly used to improve skin and digestion.', 'Images/turmeric.jpg')">
                     <img src="Images/turmeric.jpg" alt="Turmeric">
                     <div class="card-content">
                         <h3>Turmeric</h3>
-                        <p>Turmeric is an anti-inflammatory and antioxidant commonly used to improve skin and digestion.</p>
+                        <p>Improves skin and digestion.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="" style="width:100%; border-radius: 10px;">
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script>
+        function showModal(title, description, image) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalDescription").innerText = description;
+            document.getElementById("modalImage").src = image;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
