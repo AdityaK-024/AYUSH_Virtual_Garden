@@ -202,3 +202,7 @@ nav a:hover {
 #next-btn {
     display: none;
 }
+#quiz-popup
+{
+    display: none;
+}
