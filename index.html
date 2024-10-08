@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH Website</title>
- <link rel="stylesheet" href="style.css">
-       
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -84,7 +84,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle"></h2>
-            <img id="modalImage" src="" alt="" style="width:100%; border-radius: 10px;">
+            <img id="modalImage" src="" alt="">
             <p id="modalDescription"></p>
         </div>
     </div>
@@ -94,7 +94,7 @@
             document.getElementById("modalTitle").innerText = title;
             document.getElementById("modalDescription").innerText = description;
             document.getElementById("modalImage").src = image;
-            document.getElementById("myModal").style.display = "block";
+            document.getElementById("myModal").style.display = "flex"; // Set to flex to center the modal
         }
 
         function closeModal() {
@@ -105,7 +105,7 @@
         window.onclick = function(event) {
             const modal = document.getElementById("myModal");
             if (event.target === modal) {
-                modal.style.display = "none";
+                closeModal();
             }
         }
     </script>
