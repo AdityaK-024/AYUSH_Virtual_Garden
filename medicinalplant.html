@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH Website</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -14,11 +15,9 @@
         <a href="medicinalplant.html">Medicinal Plants</a>
         <a href="quizzes.html">Quizzes</a>
         <a href="aboutus.html">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="contactus.html">Contact Us</a>
         <a href="login.html">Log in</a>
     </nav>
-
-    <!-- Hero Section -->
 
     <!-- Cards displayed vertically -->
     <section class="about-section">
@@ -30,15 +29,15 @@
                     <div class="card-content">
                         <h3>Tulsi (Holy Basil)</h3>
                         <p>Known for its medicinal properties, Tulsi is used to treat colds, coughs, and respiratory issues.</p>
-                        <button class="start-quiz-btn" onclick="showPopup('Tulsi')">Learn More</button>
+                        <button class="start-quiz-btn" onclick="showModal('Tulsi (Holy Basil)', 'Known for its medicinal properties, Tulsi is used to treat colds, coughs, and respiratory issues.', 'Images/tulsi.jpg')">Learn More</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/neem.jpg" alt="Neem">
+                    <img src="Images/neem.jpg" alt="Neem">
                     <div class="card-content">
                         <h3>Neem</h3>
                         <p>Neem is used for skin care and to improve digestion. Its antibacterial properties are highly valued.</p>
-                        <button class="start-quiz-btn" onclick="showPopup('Neem')">Learn More</button>
+                        <button class="start-quiz-btn" onclick="showModal('Neem', 'Neem is used for skin care and to improve digestion. Its antibacterial properties are highly valued.', 'Images/neem.jpg')">Learn More</button>
                     </div>
                 </div>
                 <div class="card">
@@ -46,7 +45,7 @@
                     <div class="card-content">
                         <h3>Ashwagandha</h3>
                         <p>Ashwagandha is used for its stress-relieving and energy-boosting properties.</p>
-                        <button class="start-quiz-btn" onclick="showPopup('Ashwagandha')">Learn More</button>
+                        <button class="start-quiz-btn" onclick="showModal('Ashwagandha', 'Ashwagandha is used for its stress-relieving and energy-boosting properties.', 'Images/ashwagandha.jpg')">Learn More</button>
                     </div>
                 </div>
                 <div class="card">
@@ -54,7 +53,7 @@
                     <div class="card-content">
                         <h3>Aloe Vera</h3>
                         <p>Aloe Vera is used in skincare and for treating burns and improving digestion.</p>
-                        <button class="start-quiz-btn" onclick="showPopup('Aloe Vera')">Learn More</button>
+                        <button class="start-quiz-btn" onclick="showModal('Aloe Vera', 'Aloe Vera is used in skincare and for treating burns and improving digestion.', 'Images/aloevera.jpg')">Learn More</button>
                     </div>
                 </div>
                 <div class="card">
@@ -62,7 +61,7 @@
                     <div class="card-content">
                         <h3>Brahmi</h3>
                         <p>Brahmi is known for enhancing memory and cognitive abilities, used in Ayurvedic medicines.</p>
-                        <button class="start-quiz-btn" onclick="showPopup('Brahmi')">Learn More</button>
+                        <button class="start-quiz-btn" onclick="showModal('Brahmi', 'Brahmi is known for enhancing memory and cognitive abilities, used in Ayurvedic medicines.', 'Images/brahmi.jpg')">Learn More</button>
                     </div>
                 </div>
                 <div class="card">
@@ -70,7 +69,7 @@
                     <div class="card-content">
                         <h3>Turmeric</h3>
                         <p>Turmeric is an anti-inflammatory and antioxidant commonly used to improve skin and digestion.</p>
-                        <button class="start-quiz-btn" onclick="showPopup('Turmeric')">Learn More</button>
+                        <button class="start-quiz-btn" onclick="showModal('Turmeric', 'Turmeric is an anti-inflammatory and antioxidant commonly used to improve skin and digestion.', 'Images/turmeric.jpg')">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -78,15 +77,17 @@
     </section>
 
     <!-- Popup Modal -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h3 id="popup-title">Title</h3>
-            <p id="popup-description">Description</p>
-        </div>
+<!-- Popup Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="">
+        <p id="modalDescription"></p>
     </div>
-<script src="medicianlplants.js"></script>
+</div>
 
 
+    <script src="medicianlplants.js"></script>
 </body>
 </html>

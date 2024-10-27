@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH Website</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
 
@@ -15,7 +14,7 @@
         <a href="medicinalplant.html">Medicinal Plants</a>
         <a href="quizzes.html">Quizzes</a>
         <a href="aboutus.html">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="contactus.html">Contact Us</a>
         <a href="login.html">Log in</a>
     </nav>
 
@@ -28,51 +27,56 @@
         </div>
     </section>
 
-    <!-- Cards displayed vertically -->
+    <!-- Cards Section -->
     <section class="about-section">
         <div class="container">
-            <h2>Medicinal Plants</h2>
             <div class="card-container">
                 <div class="card" onclick="showModal('Tulsi', 'Known for its medicinal properties, Tulsi is used to treat colds, coughs, and respiratory issues.', 'Images/tulsi.jpg')">
-                    <img src="Images/tulsi.jpg" alt="Tulsi">
+                    <img src="Images/tulsi.jpg" alt="Tulsi plant">
                     <div class="card-content">
                         <h3>Tulsi (Holy Basil)</h3>
                         <p>Known for its medicinal properties.</p>
+                        <button class="start-quiz-btn" onclick="showPopup('Tulsi'); event.stopPropagation();">Learn More</button>
                     </div>
                 </div>
                 <div class="card" onclick="showModal('Neem', 'Neem is used for skin care and to improve digestion. Its antibacterial properties are highly valued.', 'Images/neem.jpg')">
-                    <img src="Images/neem.jpg" alt="Neem">
+                    <img src="Images/neem.jpg" alt="Neem plant">
                     <div class="card-content">
                         <h3>Neem</h3>
                         <p>Used for skin care and digestion.</p>
+                        <button class="start-quiz-btn" onclick="showPopup('Neem'); event.stopPropagation();">Learn More</button>
                     </div>
                 </div>
                 <div class="card" onclick="showModal('Ashwagandha', 'Ashwagandha is used for its stress-relieving and energy-boosting properties.', 'Images/ashwagandha.jpg')">
-                    <img src="Images/ashwagandha.jpg" alt="Ashwagandha">
+                    <img src="Images/ashwagandha.jpg" alt="Ashwagandha plant">
                     <div class="card-content">
                         <h3>Ashwagandha</h3>
                         <p>Used for stress relief and energy.</p>
+                        <button class="start-quiz-btn" onclick="showPopup('Ashwagandha'); event.stopPropagation();">Learn More</button>
                     </div>
                 </div>
                 <div class="card" onclick="showModal('Aloe Vera', 'Aloe Vera is used in skincare and for treating burns and improving digestion.', 'Images/aloevera.jpg')">
-                    <img src="Images/aloevera.jpg" alt="Aloe Vera">
+                    <img src="Images/aloevera.jpg" alt="Aloe Vera plant">
                     <div class="card-content">
                         <h3>Aloe Vera</h3>
                         <p>Used in skincare and burns treatment.</p>
+                        <button class="start-quiz-btn" onclick="showPopup('Aloe Vera'); event.stopPropagation();">Learn More</button>
                     </div>
                 </div>
                 <div class="card" onclick="showModal('Brahmi', 'Brahmi is known for enhancing memory and cognitive abilities, used in Ayurvedic medicines.', 'Images/brahmi.jpg')">
-                    <img src="Images/brahmi.jpg" alt="Brahmi">
+                    <img src="Images/brahmi.jpg" alt="Brahmi plant">
                     <div class="card-content">
                         <h3>Brahmi</h3>
                         <p>Enhances memory and cognition.</p>
+                        <button class="start-quiz-btn" onclick="showPopup('Brahmi'); event.stopPropagation();">Learn More</button>
                     </div>
                 </div>
                 <div class="card" onclick="showModal('Turmeric', 'Turmeric is an anti-inflammatory and antioxidant commonly used to improve skin and digestion.', 'Images/turmeric.jpg')">
-                    <img src="Images/turmeric.jpg" alt="Turmeric">
+                    <img src="Images/turmeric.jpg" alt="Turmeric plant">
                     <div class="card-content">
                         <h3>Turmeric</h3>
                         <p>Improves skin and digestion.</p>
+                        <button class="start-quiz-btn" onclick="showPopup('Turmeric'); event.stopPropagation();">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -80,35 +84,17 @@
     </section>
 
     <!-- Modal Structure -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <img id="modalImage" src="" alt="">
-            <p id="modalDescription"></p>
-        </div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="">
+        <p id="modalDescription"></p>
     </div>
+</div>
 
-    <script>
-        function showModal(title, description, image) {
-            document.getElementById("modalTitle").innerText = title;
-            document.getElementById("modalDescription").innerText = description;
-            document.getElementById("modalImage").src = image;
-            document.getElementById("myModal").style.display = "flex"; // Set to flex to center the modal
-        }
 
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        // Close the modal if the user clicks outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById("myModal");
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
-    </script>
+    <script src="index.js"></script>
 
 </body>
 </html>

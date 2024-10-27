@@ -1,4 +1,4 @@
-// Function to show the modal with the selected plant's information
+// Function to show the modal with the specified title, image, and description
 function showModal(title, description, imageSrc) {
     // Set the modal content
     document.getElementById('modalTitle').innerText = title;
@@ -6,18 +6,27 @@ function showModal(title, description, imageSrc) {
     document.getElementById('modalImage').src = imageSrc;
 
     // Display the modal
-    document.getElementById('myModal').style.display = 'flex';
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'block';
 }
 
 // Function to close the modal
 function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
 }
 
-// Close the modal when clicking outside of it
+// Close modal when clicking outside of it
 window.onclick = function(event) {
     const modal = document.getElementById('myModal');
     if (event.target === modal) {
         closeModal();
     }
-}
+};
+
+// Optional: Close the modal when the 'Escape' key is pressed
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
