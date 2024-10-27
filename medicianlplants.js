@@ -10,6 +10,18 @@ function showPopup(plant) {
         case 'Neem':
             description = 'Neem is a powerful herb with antibacterial properties, good for skin and digestion.';
             break;
+        case 'Ashwagandha':
+            description = 'Ashwagandha is used for its stress-relieving and energy-boosting properties.';
+            break;
+        case 'Aloe Vera':
+            description = 'Aloe Vera is used in skincare and for treating burns and improving digestion.';
+            break;   
+         case 'Brahmi':
+            description = 'Brahmi is known for enhancing memory and cognitive abilities, used in Ayurvedic medicines';
+            break;
+        case 'Turmeric':
+            description = 'Turmeric is an anti-inflammatory and antioxidant commonly used to improve skin and digestion.';
+            break;               
         // Add more cases for other plants
         default:
             description = 'No additional information available.';
