@@ -242,11 +242,6 @@ nav a:hover {
     cursor: pointer;
 }
 
-.modal img {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-}
-
 /* Basic styles for modal */
 .modal {
     display: none; /* Hidden by default */
@@ -262,43 +257,39 @@ nav a:hover {
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: 10% auto; /* Centered with some top margin */
+    padding: 40px 40px; /* Padding for content */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; /* Large popup width */
+    max-width: 600px; /* Limit max width */
     border-radius: 10px; /* Rounded corners */
+    position: relative; /* For absolute positioning of image */
 }
 
+/* Popup Image Styling - Smaller and Positioned in Corner */
+.modal-content img {
+    width: 120px; /* Smaller image size */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px; /* Rounded corners */
+    position: absolute;
+    top: 10px; /* Position image from the top */
+    left: 20px; /* Position image from the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for emphasis */
+}
+
+/* Centered content within modal card */
 .modal-card {
-    text-align: center; /* Centered content */
+    text-align: center;
 }
 
+/* Responsive image handling */
 .modal img {
-    max-width: 100%; /* Responsive image */
+    max-width: 100%; /* Responsive */
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Basic styles for modal */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
 
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    border-radius: 10px; /* Rounded corners */
-}
 
 .close {
     color: #aaa;
