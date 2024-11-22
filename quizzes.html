@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH Quizzes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Style/quizzes.css">
 </head>
+
 <body>
-\
     <!-- Navbar -->
     <nav>
         <a href="index.html">Home</a>
         <a href="medicinalplant.html">Medicinal Plants</a>
-        <a href="quizzes.html">Quizzes</a
+        <a href="quizzes.html">Quizzes</a>
         <a href="aboutus.html">About Us</a>
         <a href="contactus.html">Contact Us</a>
         <a href="login.html">Log in</a>
@@ -27,42 +28,42 @@
                     <img src="Images/Aryuvedha_image.jpg" alt="Aryuveda Quiz">
                     <div class="card-content">
                         <h3>Aryuveda Quiz</h3>
-                        <button class="start-quiz-btn" onclick="openQuizPopup('Tulsi Quiz')"><a href="ARYUVEDHA_QUIZ.html" Start Quiz </button>
+                        <a href="ARYUVEDHA_QUIZ.html" class="start-quiz-btn">Start Quiz</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/Yoga_and_Naturopathy.jpeg" alt="Neem Quiz">
+                    <img src="Images/Yoga_and_Naturopathy.jpeg" alt="Yoga Quiz">
                     <div class="card-content">
-                        <h3>yoga and naturopathy Quiz</h3>
-                        <button class="start-quiz-btn" onclick="openQuizPopup('Neem Quiz')">Start Quiz</button>
+                        <h3>Yoga and Naturopathy Quiz</h3>
+                        <a href="ARYUVEDHA_QUIZ.html" class="start-quiz-btn">Start Quiz</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/Unani image.jpg" alt="Ashwagandha Quiz">
+                    <img src="Images/Unani image.jpg" alt="Unani Quiz">
                     <div class="card-content">
                         <h3>Unani Quiz</h3>
-                        <button class="start-quiz-btn" onclick="openQuizPopup('Ashwagandha Quiz')">Start Quiz</button>
+                        <a href="ARYUVEDHA_QUIZ.html" class="start-quiz-btn">Start Quiz</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/Siddha image.jpeg" alt="Aloe Vera Quiz">
+                    <img src="Images/Siddha image.jpeg" alt="Siddha Quiz">
                     <div class="card-content">
                         <h3>Siddha Quiz</h3>
-                        <button class="start-quiz-btn" onclick="openQuizPopup('Aloe Vera Quiz')">Start Quiz</button>
+                        <a href="ARYUVEDHA_QUIZ.html" class="start-quiz-btn">Start Quiz</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/Homeopathy image.jpeg" alt="Brahmi Quiz">
+                    <img src="Images/Homeopathy image.jpeg" alt="Homeopathy Quiz">
                     <div class="card-content">
                         <h3>Homeopathy Quiz</h3>
-                        <button class="start-quiz-btn" onclick="openQuizPopup('Brahmi Quiz')">Start Quiz</button>
+                        <a href="ARYUVEDHA_QUIZ.html" class="start-quiz-btn">Start Quiz</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Images/AYUSH.jpeg" alt="Turmeric Quiz">
+                    <img src="Images/AYUSH.jpeg" alt="AYUSH Quiz">
                     <div class="card-content">
-                        <h3>THE AYUSH Quiz</h3>
-                        <button class="start-quiz-btn" onclick="openQuizPopup('Turmeric Quiz')">Start Quiz</button>
+                        <h3>The AYUSH Quiz</h3>
+                        <a href="ARYUVEDHA_QUIZ.html" class="start-quiz-btn">Start Quiz</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +71,7 @@
     </section>
 
     <!-- Popup Modal for Quizzes -->
-    <div id="quiz-popup" class="popup" >
+    <div id="quiz-popup" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closeQuizPopup()">&times;</span>
             <h3 id="quiz-popup-title">Quiz Title</h3>
@@ -86,7 +87,6 @@
         function openQuizPopup(quizTitle) {
             document.getElementById("quiz-popup-title").innerText = quizTitle;
             document.getElementById("quiz-popup").style.display = "block";
-            startQuiz(quizTitle.replace(' Quiz', ''));
         }
 
         // Function to close quiz popup
@@ -97,9 +97,9 @@
         // Function to initiate quiz
         function proceedToQuiz() {
             const title = document.getElementById("quiz-popup-title").innerText;
-            startQuiz(title.replace(' Quiz', ''));
+            alert(`Starting quiz: ${title}`);
         }
     </script>
-
 </body>
+
 </html>

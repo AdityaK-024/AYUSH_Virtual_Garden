@@ -2,62 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - AYUSH</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Ayush | Contact Us</title>
+    <link rel="stylesheet" href="Style/contactus.css">
 </head>
+
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="medicinalplant.html">Medicinal Plants</a>
-        <a href="quizzes.html">Quizzes</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="login.html">Log in</a>
-    </nav>
-<<<<<<< HEAD
-    
-=======
->>>>>>> 214974230ca7fc3c657fdb9bbe2bfaa6b73d5df9
-    <div class="container">
-        <div class="contact-form">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you! Whether you have questions, feedback, or want to learn more about Ayurvedic practices, feel free to reach out using the form below.</p>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="medicinalplant.html">Medicinal Plants</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="login.html">Log in</a>
+        </nav>
+    </header>
 
-            <form id="contact-form" onsubmit="return validateForm()">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Please enter letters only.">
+    <section>
+        <div class="form-container">
+            <form id="contactForm">
+                <h2>Contact Us</h2>
+                
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="inputbox">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
 
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required pattern="[0-9]+" title="Please enter numbers only.">
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Submit</button>
+                <button type="submit">Send Message</button>
             </form>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer">
+            <p>&copy; 2024 Ayush. All rights reserved.</p>
 
             <h2>Alternative Contact Methods</h2>
             <p>Email: <a href="mailto:contact@ayush.org">contact@ayush.org</a></p>
             <p>Phone: (123) 456-7890</p>
-            <p>Mailing Address:</p>
-            <p>AYUSH Organization<br>123 Ayurveda Lane<br>City, State, Zip Code</p>
-
             <h2>Follow Us</h2>
             <p>Stay connected through our social media:</p>
             <ul>
                 <li><a href="https://facebook.com/ayush">Facebook</a></li>
                 <li><a href="https://instagram.com/ayush">Instagram</a></li>
                 <li><a href="https://twitter.com/ayush">Twitter</a></li>
-                <li><a href="https://linkedin.com/company/ayush">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/dhawade-sanket-jayant-640175259/?originalSubdomain=in">LinkedIn</a></li>
             </ul>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
