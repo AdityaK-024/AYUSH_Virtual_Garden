@@ -1,133 +1,61 @@
-// quizzes.js
-
-// Define quiz questions for each plant
-const quizzes = {
-    "Tulsi": {
-        questions: [
-            {
-                question: "What is Tulsi commonly known as?",
-                options: ["Holy Basil", "Sweet Basil", "Thai Basil", "Wild Basil"],
-                answer: "Holy Basil"
-            },
-            {
-                question: "Which of the following is a benefit of Tulsi?",
-                options: ["Improves vision", "Reduces stress", "Boosts appetite", "Cures diabetes"],
-                answer: "Reduces stress"
-            }
-        ]
-    },
-    "Neem": {
-        questions: [
-            {
-                question: "What part of the Neem tree is commonly used in medicines?",
-                options: ["Leaves", "Bark", "Roots", "Flowers"],
-                answer: "Leaves"
-            },
-            {
-                question: "Neem is known for its properties against which condition?",
-                options: ["Diabetes", "Cancer", "Skin infections", "Hair loss"],
-                answer: "Skin infections"
-            }
-        ]
-    },
-    "Ashwagandha": {
-        questions: [
-            {
-                question: "What is Ashwagandha commonly used for?",
-                options: ["Weight loss", "Stress relief", "Muscle gain", "Skin care"],
-                answer: "Stress relief"
-            },
-            {
-                question: "Which system of medicine utilizes Ashwagandha?",
-                options: ["Allopathy", "Ayurveda", "Homeopathy", "Naturopathy"],
-                answer: "Ayurveda"
-            }
-        ]
-    },
-    "Aloe Vera": {
-        questions: [
-            {
-                question: "What is a common use of Aloe Vera?",
-                options: ["Burn treatment", "Heart medication", "Pain relief", "Weight loss"],
-                answer: "Burn treatment"
-            },
-            {
-                question: "Aloe Vera is effective for which of the following?",
-                options: ["Digestive health", "Memory enhancement", "Blood pressure", "Hair growth"],
-                answer: "Digestive health"
-            }
-        ]
-    },
-    "Brahmi": {
-        questions: [
-            {
-                question: "What is Brahmi primarily used for?",
-                options: ["Improving memory", "Curing headaches", "Enhancing vision", "Promoting sleep"],
-                answer: "Improving memory"
-            },
-            {
-                question: "Brahmi is known to help with which condition?",
-                options: ["Anxiety", "Diabetes", "Asthma", "Digestive issues"],
-                answer: "Anxiety"
-            }
-        ]
-    },
-    "Turmeric": {
-        questions: [
-            {
-                question: "What active compound in Turmeric is known for its health benefits?",
-                options: ["Curcumin", "Caffeine", "Capsaicin", "Resveratrol"],
-                answer: "Curcumin"
-            },
-            {
-                question: "Turmeric is commonly used for which of the following?",
-                options: ["Inflammation", "Fatigue", "Headaches", "Nausea"],
-                answer: "Inflammation"
-            }
-        ]
+const questions = {
+    ayurveda: [
+      { question: "What is Ayurveda's primary focus?", options: ["Yoga", "Balance of Doshas", "Herbs", "Exercise"], answer: 1 },
+    ],
+    yoga: [
+      { question: "What is the purpose of Naturopathy?", options: ["Healing through Nature", "Modern Medicine", "Exercise", "Surgery"], answer: 0 },
+    ],
+    unani: [
+      { question: "Which element is vital in Unani medicine?", options: ["Fire", "Air", "Humors", "Water"], answer: 2 },
+    ],
+    siddha: [
+      { question: "What is Siddha medicine known for?", options: ["Herbal formulations", "Ancient surgeries", "Chanting", "Pulse Diagnosis"], answer: 0 },
+    ],
+    homeopathy: [
+      { question: "What is the key principle of Homeopathy?", options: ["Dose dependency", "Like cures like", "Allopathy", "Surgery"], answer: 1 },
+    ],
+  };
+  
+  function startQuiz(category) {
+    const quizSection = document.getElementById("quiz-section");
+    const questionContainer = document.getElementById("question-container");
+    questionContainer.innerHTML = "";
+  
+    let selectedQuestions = [];
+    if (category === "ayush") {
+      selectedQuestions = Object.values(questions).flat();
+    } else {
+      selectedQuestions = questions[category];
     }
-};
-
-// Function to start the quiz
-function startQuiz(plant) {
-    const selectedQuiz = quizzes[plant];
-    if (selectedQuiz) {
-        let score = 0;
-        let currentQuestion = 0;
-
-        // Function to display the current question
-        function displayQuestion() {
-            const questionElement = document.getElementById('quiz-question');
-            const optionsElement = document.getElementById('quiz-options');
-            optionsElement.innerHTML = '';
-
-            if (currentQuestion < selectedQuiz.questions.length) {
-                questionElement.innerText = selectedQuiz.questions[currentQuestion].question;
-
-                selectedQuiz.questions[currentQuestion].options.forEach(option => {
-                    const optionElement = document.createElement('button');
-                    optionElement.innerText = option;
-                    optionElement.onclick = function() {
-                        if (option === selectedQuiz.questions[currentQuestion].answer) {
-                            score++;
-                        }
-                        currentQuestion++;
-                        displayQuestion();
-                    };
-                    optionsElement.appendChild(optionElement);
-                });
-            } else {
-                questionElement.innerText = `Quiz finished! Your score is ${score} out of ${selectedQuiz.questions.length}.`;
-                optionsElement.innerHTML = '';
-            }
-        }
-
-        displayQuestion();
-    }
-}
-
-// Function to call when the quiz is initiated
-function proceedToQuiz() {
-    const title = document.getElementById("quiz-popup-title").innerText;
-    startQuiz(title.replace(' Quiz', ''));
-}
+  
+    selectedQuestions.forEach((q, index) => {
+      const questionDiv = document.createElement("div");
+      questionDiv.className = "question";
+  
+      const questionText = document.createElement("p");
+      questionText.textContent = `${index + 1}. ${q.question}`;
+      questionDiv.appendChild(questionText);
+  
+      const optionsList = document.createElement("ul");
+      optionsList.className = "options";
+      q.options.forEach((option, i) => {
+        const optionItem = document.createElement("li");
+        const optionInput = document.createElement("input");
+        optionInput.type = "radio";
+        optionInput.name = `question${index}`;
+        optionInput.value = i;
+        optionItem.appendChild(optionInput);
+        optionItem.appendChild(document.createTextNode(option));
+        optionsList.appendChild(optionItem);
+      });
+      questionDiv.appendChild(optionsList);
+      questionContainer.appendChild(questionDiv);
+    });
+  
+    quizSection.style.display = "block";
+  }
+  
+  function submitQuiz() {
+    alert("Quiz submitted! Implement scoring logic as needed.");
+  }
+  

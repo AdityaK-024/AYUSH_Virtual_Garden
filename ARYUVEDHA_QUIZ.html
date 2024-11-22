@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYUSH Quiz</title>
+  <link rel="stylesheet" href="ARYUVEDHA.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="medicinalplant.html">Medicinal Plants</a></li>
+      <li><a href="quizzes.html">Quizzes</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="login.html">Log in</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>AYUSH Quiz</h1>
+    <p>Choose a category or take the comprehensive AYUSH Test!</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Quiz Categories -->
+    <div class="category">
+      <button onclick="startQuiz('ayurveda')">Ayurveda</button>
+      <button onclick="startQuiz('yoga')">Yoga and Naturopathy</button>
+      <button onclick="startQuiz('unani')">Unani</button>
+      <button onclick="startQuiz('siddha')">Siddha</button>
+      <button onclick="startQuiz('homeopathy')">Homeopathy</button>
+      <button onclick="startQuiz('ayush')">The AYUSH Test</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-section" style="display:none;">
+        <div id="question-container"></div>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+    </div>
+    
+    <!-- Add this container to show the score -->
+    <div id="result-container" style="display:none; font-size: 20px; margin-top: 20px;"></div>
+    
+  </main>
+
+  <!-- External JavaScript -->
+  <script src="ARYUVEDHA_QUIZ.js"></script>
+  
+</body>
+</html>

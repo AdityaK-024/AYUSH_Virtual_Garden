@@ -1,0 +1,80 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: white;
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+    background-color: #333; /* Dark gray background for the navbar */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes items align horizontally */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds space between the links */
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: black;
+    background-color: #4caf50; /* Green hover effect */
+    border-radius: 5px;
+  }
+  
+  /* Header Styling */
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #444; /* Slightly lighter gray for the header */
+  }
+  
+  /* Category Buttons */
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .category button {
+    flex: 0 1 calc(25% - 30px);
+    max-width: 200px;
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .category button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
