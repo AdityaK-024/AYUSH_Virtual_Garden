@@ -391,4 +391,21 @@ button:hover {
     color: #006666;
     text-decoration: underline;
 }
+.see-more-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #004d4d;
+    color: #f2f2f2;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+}
 

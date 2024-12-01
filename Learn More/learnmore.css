@@ -34,361 +34,55 @@ nav a:hover {
     color: #004d4d;
 }
 
-/* Hero Section */
-.hero {
-    background: url('herbal_garden_bg.jpg') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+/* Plant Information Section */
+.plant-info {
+    padding: 50px 20px;
     text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 4em;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-    margin: 0;
-}
-
-.hero-content .tagline {
-    margin-top: 10px;
-    font-size: 1.4em;
-    font-style: italic;
-    color: #ffcc00; /* Bright quote text */
-}
-
-/* About Section */
-.about-section {
-    padding: 60px 20px;
     background-color: #101010;
-    color: #eaeaea;
+    color: #f2f2f2;
 }
 
-.about-section .container {
-    max-width: 1200px;
+.plant-info img {
+    width: 400px;
+    max-width: 100%;
+    display: block;
     margin: 0 auto;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
-.about-section h2 {
-    font-size: 2.8em;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #ffcc00;
+.description {
+    text-align: left;
+    margin-top: 20px;
 }
 
-.about-section p {
+.description h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #ffcc00; /* Golden color for titles */
+}
+
+.description p {
     font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-/* Features Section */
-.features-section {
-    margin-top: 50px;
-}
-
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 40px;
-}
-
-.card {
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 12px;
-    width: 30%;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.card-content h3 {
-    font-size: 1.5em;
     margin-bottom: 10px;
-    color: #ffcc00;
+    line-height: 1.5;
 }
 
-.card-content p {
-    font-size: 1.1em;
-    color: #ccc;
+.description strong {
+    color: #ffcc00; /* Highlight the labels */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .card {
-        width: 45%;
+    .plant-info img {
+        width: 80%;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .description h2 {
+        font-size: 2em;
     }
 }
-
-@media (max-width: 480px) {
-    .card {
-        width: 90%;
-    }
-}
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 500px;
-    color: white; /* Change text color to white for better visibility */
-}
-.close-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.start-quiz-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #004d4d;
-    border: none;
-    border-radius: 8px;
-    color: #f2f2f2;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-.start-quiz-btn:hover {
-    background-color: #006666;
-    transform: scale(1.05); /* Adds a slight scaling effect on hover */
-}
-/* Quiz styling */
-.quiz {
-    display: none; /* Hide quiz initially */
-    margin-top: 20px; /* Add space above quiz */
-}
-.btn {
-    margin-top: 10px;
-}
-#next-btn {
-    display: none;
-}
-#quiz-popup
-{
-    display: none;
-}
-/* Basic styles for modal */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Basic styles for modal */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto; /* Centered with some top margin */
-    padding: 40px 40px; /* Padding for content */
-    border: 1px solid #888;
-    width: 80%; /* Large popup width */
-    max-width: 600px; /* Limit max width */
-    border-radius: 10px; /* Rounded corners */
-    position: relative; /* For absolute positioning of image */
-}
-
-/* Popup Image Styling - Smaller and Positioned in Corner */
-.modal-content img {
-    width: 120px; /* Smaller image size */
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px; /* Rounded corners */
-    position: absolute;
-    top: 10px; /* Position image from the top */
-    left: 20px; /* Position image from the left */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for emphasis */
-}
-
-/* Centered content within modal card */
-.modal-card {
-    text-align: center;
-}
-
-/* Responsive image handling */
-.modal img {
-    max-width: 100%; /* Responsive */
-    height: auto; /* Maintain aspect ratio */
-}
-
-
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-/* Body, Navbar, and Footer styles remain the same as login.css */
-
-/* Form Styling */
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-
-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 8px;
-    background-color: #333;
-    color: #f2f2f2;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    background-color: #555;
-}
-
-textarea {
-    resize: vertical;
-}
-
-/* Button styling */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #004d4d;
-    border: none;
-    border-radius: 8px;
-    color: #f2f2f2;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #006666;
-}
-/* Footer Styling */
-#footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #004d4d;
-    color: #f2f2f2;
-}
-
-#footer h2 {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #f2f2f2;
-}
-
-#footer p, #footer ul {
-    margin: 10px 0;
-}
-
-#footer ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-#footer ul li a {
-    color: #f2f2f2;
-    text-decoration: none;
-}
-
-#footer ul li a:hover {
-    color: #006666;
-    text-decoration: underline;
-}
-
