@@ -489,3 +489,60 @@ button:hover {
 #dropdown-content.visible {
     display: block;
 }
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+
+/* Search Input Styling */
+
+.search-form input {
+    padding: 4px 8px; /* Smaller padding for a compact input */
+    border-radius: 3px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border for input */
+    margin-right: 5px; /* Space between input and button */
+    font-size: 0.9em; /* Smaller font size */
+    width: 150px; /* Limit the width */
+}
+
+/* Search Button Styling */
+.search-btn {
+    background-color: #004d4d; /* Use navbar background color */
+    color: #f2f2f2; /* Light text color */
+    padding: 4px 12px; /* Smaller padding for a compact button */
+    border: none; /* Removes default border */
+    border-radius: 3px; /* Rounded corners */
+    font-size: 0.9em; /* Smaller font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: auto; /* Makes the button's width just enough for the word "Search" */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Search Button Hover Effect */
+.search-btn:hover {
+    background-color: #006666; /* Darker shade for hover */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Search Button Focus Effect */
+.search-btn:focus {
+    outline: none; /* Removes the focus outline */
+    box-shadow: 0 0 5px 2px rgba(0, 204, 204, 0.5); /* Adds a subtle shadow on focus */
+}
+
+.see-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .see-more-btn {
+    text-align: center; /* Ensures the text inside the button is centered */
+  }
+  
+
