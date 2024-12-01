@@ -8,15 +8,41 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav>
         <a href="index.html">Home</a>
         <a href="medicinalplant.html">Medicinal Plants</a>
         <a href="quizzes.html">Quizzes</a>
         <a href="aboutus.html">About Us</a>
         <a href="contactus.html">Contact Us</a>
-        <a href="login.html">Log in</a>
+        
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+        <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>
+        
+        
     </nav>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -82,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <div class="see-more-container" style="text-align: center; margin-top: 20px;">
+        <div class="see-more-container" >
             <a href="medicinalplant.html" class="see-more-btn">See More</a>
         </div>
         
@@ -91,7 +117,41 @@
 
     <!-- Modal Structure -->
 
-    <script src="index.js"></script>
+    <script>
+        // Check login status in localStorage and update navbar
+        window.onload = function () {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+            if (isLoggedIn === 'true') {
+                // Hide login link, show profile container
+                document.getElementById('login-link-container').style.display = 'none';
+                document.getElementById('profile-container').style.display = 'flex';
+                document.getElementById('dropdown-content').style.display = 'none';
+            } else {
+                // Show login link, hide profile container
+                document.getElementById('login-link-container').style.display = 'block';
+                document.getElementById('profile-container').style.display = 'none';
+                document.getElementById('dropdown-content').style.display = 'none';
+            }
+        }
+    
+        function setLoginStatus() {
+            localStorage.setItem('isLoggedIn', 'true');
+            window.location.reload();
+        }
+    
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.reload();
+        }
+    
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdown-content");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+    </script>
+    
+    
 
 </body>
 </html>

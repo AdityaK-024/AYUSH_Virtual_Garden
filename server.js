@@ -1,12 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
+const session = require('express-session');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON data
 app.use(bodyParser.json());
+
+// Middleware for session handling
+app.use(session({
+    secret: 'secretKey',  // You can change this to a stronger key
+    resave: false,
+    saveUninitialized: true
+}));
 
 // MySQL connection setup
 const db = mysql.createConnection({
@@ -44,17 +53,24 @@ db.query(`
 app.post('/signup', (req, res) => {
     const { name, email, DOB, gender, password } = req.body;
 
-    // SQL query to insert the user data
-    const query = `INSERT INTO users (name, email, DOB, gender, password) VALUES (?, ?, ?, ?, ?)`;
-
-    db.query(query, [name, email, DOB, gender, password], (err, result) => {
+    // Hash the password before saving it
+    bcrypt.hash(password, 10, (err, hashedPassword) => {
         if (err) {
-            if (err.code === 'ER_DUP_ENTRY') {
-                return res.status(400).json({ message: 'Email already registered!' });
-            }
-            return res.status(500).json({ message: 'Database error', error: err });
+            return res.status(500).json({ message: 'Error hashing password', error: err });
         }
-        res.status(201).json({ message: 'Account created successfully!' });
+
+        // SQL query to insert the user data with hashed password
+        const query = `INSERT INTO users (name, email, DOB, gender, password) VALUES (?, ?, ?, ?, ?)`;
+
+        db.query(query, [name, email, DOB, gender, hashedPassword], (err, result) => {
+            if (err) {
+                if (err.code === 'ER_DUP_ENTRY') {
+                    return res.status(400).json({ message: 'Email already registered!' });
+                }
+                return res.status(500).json({ message: 'Database error', error: err });
+            }
+            res.status(201).json({ message: 'Account created successfully!' });
+        });
     });
 });
 
@@ -70,12 +86,63 @@ app.post('/login', (req, res) => {
 
         const user = results[0];
 
-        // Check password (for simplicity, this assumes passwords are stored in plain text)
-        if (password === user.password) {
-            return res.status(200).json({ message: 'Login successful!', userId: user.id });
-        } else {
-            return res.status(401).json({ message: 'Invalid password' });
-        }
+        // Compare the entered password with the hashed password stored in the database
+        bcrypt.compare(password, user.password, (err, isMatch) => {
+            if (err) return res.status(500).json({ message: 'Error comparing password', error: err });
+
+            if (isMatch) {
+                // Passwords match, login successful
+                req.session.isLoggedIn = true;
+                req.session.userId = user.id;  // Store user ID in session
+                res.status(200).json({ message: 'Login successful!', userId: user.id });
+            } else {
+                res.status(401).json({ message: 'Invalid password' });
+            }
+        });
+    });
+});
+
+// Profile - Get User Profile
+app.get('/profile', (req, res) => {
+    if (!req.session.isLoggedIn) {
+        return res.status(401).json({ message: 'You must be logged in to view your profile.' });
+    }
+
+    const userId = req.session.userId;
+    
+    // SQL query to get the user's profile information
+    const query = 'SELECT id, name, email, DOB, gender FROM users WHERE id = ?';
+    db.query(query, [userId], (err, results) => {
+        if (err) return res.status(500).json({ message: 'Database error', error: err });
+        if (results.length === 0) return res.status(404).json({ message: 'User not found' });
+
+        const user = results[0];
+        res.status(200).json({ message: 'Profile retrieved successfully', user });
+    });
+});
+
+// Profile - Update User Profile
+app.put('/profile', (req, res) => {
+    if (!req.session.isLoggedIn) {
+        return res.status(401).json({ message: 'You must be logged in to update your profile.' });
+    }
+
+    const userId = req.session.userId;
+    const { name, email, DOB, gender } = req.body;
+
+    // SQL query to update the user's profile information
+    const query = 'UPDATE users SET name = ?, email = ?, DOB = ?, gender = ? WHERE id = ?';
+    db.query(query, [name, email, DOB, gender, userId], (err, result) => {
+        if (err) return res.status(500).json({ message: 'Database error', error: err });
+        res.status(200).json({ message: 'Profile updated successfully!' });
+    });
+});
+
+// Handle logout (optional)
+app.post('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) return res.status(500).json({ message: 'Error logging out', error: err });
+        res.status(200).json({ message: 'Logged out successfully' });
     });
 });
 
