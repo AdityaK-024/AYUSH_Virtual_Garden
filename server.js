@@ -149,7 +149,10 @@ app.post('/logout', (req, res) => {
 // Serve the signup form and other static files
 app.use(express.static(__dirname));
 
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+

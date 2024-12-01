@@ -13,9 +13,27 @@
         <a href="../quizzes.html">Quizzes</a>
         <a href="../aboutus.html">About Us</a>
         <a href="../contactus.html">Contact Us</a>
-        <a href="../login.html">Log in</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
     </nav>
-    
     <!-- Plant Information Section -->
     <section class="plant-info">
         <img src="../Images/thyme.jpg" alt="Thyme Plant" class="plant-img">
@@ -49,5 +67,6 @@
             <p><strong>Scientific Research:</strong> Studies have confirmed the antimicrobial properties of thyme, showing its effectiveness in fighting infections, particularly in the respiratory system. Research also supports its use in treating digestive issues and relieving pain and inflammation in joints and muscles.</p>
         </div>
     </section>
+    <script src="../myprofile.js"></script>
 </body>
 </html>

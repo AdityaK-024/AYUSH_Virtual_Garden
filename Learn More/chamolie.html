@@ -13,7 +13,26 @@
         <a href="../quizzes.html">Quizzes</a>
         <a href="../aboutus.html">About Us</a>
         <a href="../contactus.html">Contact Us</a>
-        <a href="../login.html">Log in</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
     </nav>
     
     <!-- Plant Information Section -->
@@ -51,5 +70,6 @@
             <p><strong>Scientific Research:</strong> Research has shown that chamomile is effective in promoting relaxation, improving sleep, and reducing anxiety. Studies also support its use in treating digestive issues and skin conditions. Chamomile's anti-inflammatory and antioxidant properties have also been well-documented, making it a valuable herb for overall health.</p>
         </div>
     </section>
+    <script src="../myprofile.js"></script>
 </body>
 </html>

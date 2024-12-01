@@ -9,16 +9,40 @@
 </head>
 
 <body>
-    <header>
         <nav>
             <a href="index.html">Home</a>
             <a href="medicinalplant.html">Medicinal Plants</a>
             <a href="quizzes.html">Quizzes</a>
             <a href="aboutus.html">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="login.html">Log in</a>
+            <a href="contactus.html">Contact Us</a>
+            
+            <!-- Profile dropdown on the far right -->
+            <div id="profile-container">
+                <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                    <img id="profile-image" src="Images/Defualt.jpg" alt="Profile Picture">
+                </div>
+                <div id="dropdown-menu">
+                    <div id="dropdown-content">
+                        <a href="#">View Profile</a>
+                        <a href="#">Edit Profile</a>
+                        <a href="#">Settings</a>
+                        <button onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+    
+            <!-- Login / My Profile button (visible when not logged in) -->
+            <div id="login-link-container">
+                <div id="dropdown-menu">
+                    <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+                </div>
+            </div>
+            
+            
         </nav>
-    </header>
 
     <section>
         <div class="form-container">
@@ -55,5 +79,6 @@
             </ul>
         </div>
     </footer>
+    <script src="myprofile.js"></script>
 </body>
 </html>

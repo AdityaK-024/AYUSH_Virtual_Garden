@@ -7,13 +7,33 @@
     <link rel="stylesheet" href="learnmore.css">
 </head>
 <body>
+   
     <nav>
         <a href="../index.html">Home</a>
         <a href="../medicinalplant.html">Medicinal Plants</a>
         <a href="../quizzes.html">Quizzes</a>
         <a href="../aboutus.html">About Us</a>
         <a href="../contactus.html">Contact Us</a>
-        <a href="../login.html">Log in</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
     </nav>
     
     <!-- Plant Information Section -->
@@ -51,5 +71,6 @@
             <p><strong>Scientific Research:</strong> Research on Ashwagandha has confirmed its ability to reduce cortisol levels, enhance cognitive function, and improve energy levels. Studies have also demonstrated its effectiveness in reducing symptoms of stress, anxiety, and depression, as well as its potential to improve fertility and reproductive health.</p>
         </div>
     </section>
+    <script src="../myprofile.js"></script>
 </body>
 </html>
