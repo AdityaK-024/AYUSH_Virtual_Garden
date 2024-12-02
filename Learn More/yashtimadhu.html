@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashtimadhu Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/yashtimadhu.jpg" alt="Yashtimadhu Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Yashtimadhu</h2>
+            <p><strong>Scientific Name:</strong> Glycyrrhiza glabra</p>
+            <p><strong>Common Names:</strong> Licorice, Yashtimadhu, Sweetwood</p>
+            <p><strong>Origin:</strong> Native to Europe and parts of Asia, Yashtimadhu is widely cultivated in temperate regions around the world.</p>
+            <p><strong>Uses in Medicine:</strong> Yashtimadhu is well-known for its soothing properties, particularly in treating respiratory issues. It has been used in traditional medicine to treat cough, sore throat, and digestive problems due to its anti-inflammatory and antioxidant effects.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Relieves respiratory conditions such as cough, bronchitis, and sore throat.</li>
+                    <li>Supports digestive health by alleviating indigestion and stomach ulcers.</li>
+                    <li>Has anti-inflammatory properties that help reduce symptoms of arthritis and other inflammatory conditions.</li>
+                    <li>Boosts immunity and has antiviral properties to help fight infections.</li>
+                    <li>Promotes skin health by reducing irritation and promoting wound healing.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Respiratory conditions:</strong> Cough, sore throat, bronchitis, and asthma.</li>
+                    <li><strong>Digestive disorders:</strong> Indigestion, stomach ulcers, and acid reflux.</li>
+                    <li><strong>Arthritis:</strong> Reduces inflammation and pain associated with joint conditions.</li>
+                    <li><strong>Skin conditions:</strong> Irritation, eczema, and wound healing.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Yashtimadhu has been used for thousands of years in traditional medicine systems such as Ayurveda and Traditional Chinese Medicine. In Ayurveda, it is considered a powerful herb for balancing the body’s internal energy and promoting vitality.</p>
+            <p><strong>Preparation and Dosage:</strong> Yashtimadhu can be used in various forms such as powder, extract, or tea. It is often combined with other herbs in Ayurvedic formulations for respiratory and digestive health. The root is commonly used for medicinal purposes.</p>
+            <p><strong>Scientific Research:</strong> Research on Yashtimadhu has shown its potential in treating conditions like respiratory infections, digestive disorders, and inflammation. Studies have also indicated its use as a potential treatment for adrenal insufficiency and its ability to balance blood sugar levels.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

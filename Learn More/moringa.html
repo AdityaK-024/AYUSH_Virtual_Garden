@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moringa Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/moringa.jpg" alt="Moringa Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Moringa</h2>
+            <p><strong>Scientific Name:</strong> Moringa oleifera</p>
+            <p><strong>Common Names:</strong> Drumstick Tree, Moringa, Horseradish Tree, Miracle Tree</p>
+            <p><strong>Origin:</strong> Native to the Indian subcontinent, Moringa is widely cultivated in tropical and subtropical regions worldwide.</p>
+            <p><strong>Uses in Medicine:</strong> Moringa is a highly nutritious plant known for its leaves, pods, and seeds. It has numerous medicinal uses, including its anti-inflammatory, antioxidant, and antimicrobial properties. It is considered a "superfood" due to its high content of vitamins, minerals, and antioxidants.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Rich in nutrients, including vitamins A, C, and E, and essential amino acids.</li>
+                    <li>Helps in reducing inflammation and treating conditions like arthritis.</li>
+                    <li>Improves digestion and supports gut health.</li>
+                    <li>Supports heart health by lowering cholesterol and regulating blood pressure.</li>
+                    <li>Boosts immunity and helps fight infections due to its antimicrobial properties.</li>
+                    <li>Enhances skin health and promotes healthy hair growth.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Arthritis:</strong> Reduces inflammation and pain associated with joint conditions.</li>
+                    <li><strong>Digestive disorders:</strong> Alleviates constipation, bloating, and indigestion.</li>
+                    <li><strong>Cardiovascular health:</strong> Reduces cholesterol levels and supports heart health.</li>
+                    <li><strong>Infections:</strong> Due to its antimicrobial properties, Moringa helps fight infections.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Moringa has been used in traditional medicine for thousands of years. In many cultures, it is regarded as a "miracle tree" due to its vast range of health benefits. It is commonly used in Indian Ayurvedic medicine, as well as in African and Southeast Asian traditional healing practices.</p>
+            <p><strong>Preparation and Dosage:</strong> Moringa is available in various forms such as powders, capsules, oils, and teas. The leaves and pods are commonly used for medicinal purposes. Moringa can be consumed as a supplement or used in cooking, particularly in soups, salads, and smoothies.</p>
+            <p><strong>Scientific Research:</strong> Studies have shown that Moringa has significant health benefits, particularly in reducing inflammation, supporting heart health, and boosting immunity. Research also suggests Moringa’s potential as a treatment for diabetes, high blood pressure, and even cancer prevention.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

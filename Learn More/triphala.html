@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triphala Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/triphala.jpg" alt="Triphala" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Triphala</h2>
+            <p><strong>Scientific Name:</strong> A combination of three fruits: Terminalia chebula, Terminalia bellirica, and Phyllanthus emblica</p>
+            <p><strong>Common Names:</strong> Triphala, The Three Fruits, Amla, Haritaki, Bibhitaki</p>
+            <p><strong>Origin:</strong> Triphala is a traditional Ayurvedic formulation, primarily used in India and other parts of South Asia.</p>
+            <p><strong>Uses in Medicine:</strong> Triphala is widely known for its detoxifying and rejuvenating properties. It is used in Ayurveda to balance the body's three doshas and improve digestive health, detoxify the liver, and boost overall vitality.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Improves digestion and promotes regular bowel movements.</li>
+                    <li>Acts as a natural detoxifier, helping to flush out toxins from the body.</li>
+                    <li>Boosts the immune system and promotes general well-being.</li>
+                    <li>Has anti-inflammatory and antioxidant effects that support overall health.</li>
+                    <li>Improves skin health by promoting clearer skin and preventing acne.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Digestive disorders:</strong> Constipation, indigestion, and bloating.</li>
+                    <li><strong>Detoxification:</strong> Helps cleanse the liver and remove toxins from the body.</li>
+                    <li><strong>Immune system support:</strong> Strengthens the immune system to prevent infections.</li>
+                    <li><strong>Inflammatory conditions:</strong> Reduces inflammation in the body, helping with conditions like arthritis.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Triphala has been used for thousands of years in Ayurveda as a key herb for balancing bodily systems, enhancing digestive health, and rejuvenating the body.</p>
+            <p><strong>Preparation and Dosage:</strong> Triphala is typically available in powder, capsule, or tablet form. It can be consumed with warm water, or the powder can be added to smoothies or juices. Dosage may vary based on health conditions, so it's best to consult an Ayurvedic practitioner for personalized recommendations.</p>
+            <p><strong>Scientific Research:</strong> Studies have shown that Triphala supports healthy digestion, detoxification, and immune function. Research also highlights its antioxidant and anti-inflammatory properties, making it beneficial for overall health.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

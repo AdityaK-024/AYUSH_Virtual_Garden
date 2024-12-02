@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinnamon Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/cinnamon.jpg" alt="Cinnamon Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Cinnamon</h2>
+            <p><strong>Scientific Name:</strong> Cinnamomum verum</p>
+            <p><strong>Common Names:</strong> True Cinnamon, Cinnamomum, Cinnamomum verum</p>
+            <p><strong>Origin:</strong> Native to Sri Lanka and southern India, Cinnamon is widely cultivated in tropical and subtropical regions worldwide.</p>
+            <p><strong>Uses in Medicine:</strong> Cinnamon has been used for centuries as a medicinal herb, especially for its anti-inflammatory, antimicrobial, and antioxidant properties. It is commonly used to treat digestive problems, improve blood sugar control, and relieve symptoms of respiratory conditions.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Helps regulate blood sugar levels, especially in people with type 2 diabetes.</li>
+                    <li>Supports digestive health by reducing bloating, gas, and indigestion.</li>
+                    <li>Has anti-inflammatory properties that help reduce inflammation in the body.</li>
+                    <li>Boosts heart health by improving cholesterol levels and reducing blood pressure.</li>
+                    <li>May help protect against neurodegenerative diseases due to its antioxidant effects.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Diabetes:</strong> Cinnamon helps regulate blood sugar and insulin sensitivity in people with type 2 diabetes.</li>
+                    <li><strong>Digestive disorders:</strong> Alleviates symptoms of indigestion, bloating, and gas.</li>
+                    <li><strong>Cardiovascular diseases:</strong> May help lower cholesterol levels and blood pressure, reducing the risk of heart disease.</li>
+                    <li><strong>Neurodegenerative diseases:</strong> The antioxidants in Cinnamon may help protect brain cells from damage.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Cinnamon has been used in Ayurvedic and traditional Chinese medicine for thousands of years, primarily for its ability to treat digestive and respiratory ailments. It was also highly valued in ancient Egypt for its medicinal and embalming properties.</p>
+            <p><strong>Preparation and Dosage:</strong> Cinnamon can be consumed in several forms, including as a powder, bark, essential oil, or in teas and capsules. It is commonly used in cooking and baking, but for medicinal purposes, it is recommended to use Cinnamomum verum (true cinnamon) for maximum benefit.</p>
+            <p><strong>Scientific Research:</strong> Research has shown that Cinnamon has potent anti-inflammatory, antioxidant, and anti-diabetic properties. Studies suggest that regular consumption of Cinnamon may help manage blood sugar levels, reduce inflammation, and improve heart health.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

@@ -145,6 +145,35 @@ app.post('/logout', (req, res) => {
         res.status(200).json({ message: 'Logged out successfully' });
     });
 });
+// Create the contacts table if it doesn't exist
+db.query(`
+    CREATE TABLE IF NOT EXISTS contacts (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        subject VARCHAR(255) NOT NULL,
+        message TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+`, (err, result) => {
+    if (err) throw err;
+    console.log("Contacts table created or already exists");
+});
+
+// Add the new Contact Us endpoint here
+app.post('/contactus', (req, res) => {
+    const { name, email, subject, message } = req.body;
+
+    const query = `INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)`;
+
+    db.query(query, [name, email, subject, message], (err, result) => {
+        if (err) {
+            return res.status(500).json({ message: 'Database error', error: err });
+        }
+        res.status(201).json({ message: 'Message sent successfully!' });
+    });
+});
+
 
 // Serve the signup form and other static files
 app.use(express.static(__dirname));

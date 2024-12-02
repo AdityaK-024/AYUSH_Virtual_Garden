@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+   <link rel="stylesheet" href="Style/viewprofile.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-header">
+            <h1>User Profile</h1>
+        </div>
+
+        <!-- Profile Image -->
+        <img id="profile-img" src="default-profile.jpg" alt="Profile Image">
+
+        <!-- Profile Information -->
+        <div class="profile-info">
+            <div><span>Name:</span> <span id="profile-name">Loading...</span></div>
+            <div><span>Email:</span> <span id="profile-email">Loading...</span></div>
+            <div><span>Date of Birth:</span> <span id="profile-dob">Loading...</span></div>
+            <div><span>Gender:</span> <span id="profile-gender">Loading...</span></div>
+        </div>
+
+        <a href="/" class="back-btn">Back to Home</a>
+    </div>
+
+    <script>
+        // Assuming the user is already logged in and the session is active
+        function fetchProfile() {
+            fetch('/profile', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                credentials: 'same-origin', // Ensures that the session cookie is sent
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Profile retrieved successfully') {
+                    const user = data.user;
+                    // Display profile data in the HTML
+                    document.getElementById('profile-name').textContent = user.name;
+                    document.getElementById('profile-email').textContent = user.email;
+                    document.getElementById('profile-dob').textContent = user.DOB;
+                    document.getElementById('profile-gender').textContent = user.gender;
+                    // If you have an image or other profile data, you can display it as well
+                    if (user.profileImage) {
+                        document.getElementById('profile-img').src = user.profileImage;
+                    }
+                    // <img src="/uploads/{{user.profile_image}}" alt="Profile Image" />
+
+                } else {
+                    alert(data.message);  // Handle errors like "User not found"
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching profile data:', error);
+            });
+        }
+
+        // Call the fetchProfile function when the page is loaded
+        window.onload = fetchProfile;
+    </script>
+
+</body>
+</html>

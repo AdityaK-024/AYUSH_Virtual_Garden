@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guduchi Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/guduchi.jpg" alt="Guduchi Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Guduchi</h2>
+            <p><strong>Scientific Name:</strong> Tinospora cordifolia</p>
+            <p><strong>Common Names:</strong> Guduchi, Giloy, Amrita, Heart-leaved Moonseed</p>
+            <p><strong>Origin:</strong> Guduchi is native to India, found growing in tropical and subtropical regions, particularly on trees in forests and on the edges of fields.</p>
+            <p><strong>Uses in Medicine:</strong> Guduchi is an important herb in Ayurveda, known for its ability to boost the immune system, fight infections, and improve overall vitality and energy levels.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Enhances immune function and acts as a natural detoxifier.</li>
+                    <li>Reduces fever and alleviates symptoms of viral infections.</li>
+                    <li>Supports liver health and detoxifies the body.</li>
+                    <li>Helps manage diabetes by lowering blood sugar levels.</li>
+                    <li>Improves digestive health and reduces inflammation.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Infections:</strong> Helps in treating viral and bacterial infections.</li>
+                    <li><strong>Fever:</strong> Effective in reducing fever, especially in chronic or recurrent cases.</li>
+                    <li><strong>Diabetes:</strong> Helps in controlling blood sugar levels.</li>
+                    <li><strong>Liver disorders:</strong> Promotes liver detoxification and treats liver-related ailments.</li>
+                    <li><strong>Inflammation:</strong> Reduces inflammation in the body.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Guduchi has been used in Ayurvedic medicine for thousands of years. It is highly regarded for its rejuvenating and healing properties. It is considered a "rasayana" or longevity herb that helps enhance the quality of life.</p>
+            <p><strong>Preparation and Dosage:</strong> Guduchi can be consumed as powder, juice, or in the form of capsules and tablets. The dosage varies depending on the form used, and it is advised to consult with a healthcare professional for appropriate use.</p>
+            <p><strong>Scientific Research:</strong> Scientific studies support Guduchi’s immune-boosting, anti-inflammatory, and blood sugar-lowering properties. It has also been shown to have antioxidant effects and helps in the treatment of chronic diseases like diabetes and infections.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacha Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/vacha.jpg" alt="Vacha Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Vacha</h2>
+            <p><strong>Scientific Name:</strong> Acorus calamus</p>
+            <p><strong>Common Names:</strong> Vacha, Sweet Flag, Calamus, Snake Root</p>
+            <p><strong>Origin:</strong> Native to Asia and Europe, Vacha is commonly found in wetlands, marshy areas, and along riverbanks.</p>
+            <p><strong>Uses in Medicine:</strong> Vacha is known for its medicinal properties, particularly in improving cognitive function, boosting memory, and enhancing brain health. It is also used for digestive and respiratory health.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Enhances cognitive function and memory.</li>
+                    <li>Improves respiratory health by alleviating symptoms of asthma and bronchitis.</li>
+                    <li>Helps in digestion and alleviates indigestion and bloating.</li>
+                    <li>Has anti-inflammatory and analgesic properties, useful in treating joint pain.</li>
+                    <li>Promotes nervous system health and reduces stress and anxiety.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Cognitive disorders:</strong> Improves memory, concentration, and brain function.</li>
+                    <li><strong>Respiratory conditions:</strong> Asthma, bronchitis, and other respiratory ailments.</li>
+                    <li><strong>Digestive problems:</strong> Indigestion, bloating, and gas.</li>
+                    <li><strong>Joint pain:</strong> Reduces pain and inflammation in joints.</li>
+                    <li><strong>Stress and anxiety:</strong> Acts as a natural sedative to calm the mind.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Vacha has been used in Ayurveda for centuries for its ability to enhance mental clarity and promote overall well-being. It is also a part of traditional medicine in various cultures for treating digestive and respiratory issues.</p>
+            <p><strong>Preparation and Dosage:</strong> Vacha is commonly available in the form of powder, capsules, and oil. It can be consumed in small doses, either mixed with honey or taken with warm water. It is important to consult a healthcare provider for appropriate use.</p>
+            <p><strong>Scientific Research:</strong> Research supports the use of Vacha in enhancing cognitive function, improving memory, and alleviating symptoms of respiratory conditions. Studies also highlight its anti-inflammatory and antimicrobial properties, which make it beneficial for digestive and joint health.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

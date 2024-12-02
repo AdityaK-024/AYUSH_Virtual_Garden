@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bael Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/bael.jpg" alt="Bael Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Bael</h2>
+            <p><strong>Scientific Name:</strong> Aegle marmelos</p>
+            <p><strong>Common Names:</strong> Bael, Bel, Bengal Quince, Indian Bael</p>
+            <p><strong>Origin:</strong> Native to the Indian subcontinent and found throughout Southeast Asia.</p>
+            <p><strong>Uses in Medicine:</strong> Bael is revered in traditional medicine for its potent digestive and immune-boosting properties. It is commonly used in Ayurveda to treat a variety of gastrointestinal issues and promote overall health.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Improves digestion and relieves constipation.</li>
+                    <li>Has anti-inflammatory and antimicrobial properties.</li>
+                    <li>Boosts immunity and helps prevent infections.</li>
+                    <li>Supports heart health by lowering blood pressure and cholesterol levels.</li>
+                    <li>Helps manage blood sugar levels and supports diabetes control.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Gastrointestinal issues:</strong> Diarrhea, constipation, indigestion, and stomach ulcers.</li>
+                    <li><strong>Infections:</strong> Respiratory infections, digestive tract infections, and fever.</li>
+                    <li><strong>Heart health:</strong> Helps control blood pressure and cholesterol levels.</li>
+                    <li><strong>Diabetes:</strong> Helps in controlling blood sugar levels in type 2 diabetes.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> In Hinduism, Bael is considered a sacred plant, associated with Lord Shiva, and is often used in religious rituals. Its fruits, leaves, and bark have been utilized for centuries for their medicinal and spiritual properties.</p>
+            <p><strong>Preparation and Dosage:</strong> The fruit of Bael is consumed in the form of juice, pulp, or powder. The leaves are used to make extracts or decoctions for various health benefits. It is advised to consult a healthcare professional before starting regular Bael consumption, especially for individuals with specific health conditions.</p>
+            <p><strong>Scientific Research:</strong> Studies support Bael’s benefits for digestive health, particularly in treating diarrhea and constipation. Research also highlights its anti-inflammatory, antimicrobial, and blood sugar-regulating properties.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

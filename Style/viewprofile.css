@@ -1,0 +1,112 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #f2f2f2;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/* Header */
+.profile-header {
+    background-color: #004d4d;
+    padding: 1rem;
+    color: #f2f2f2;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+    font-size: 2rem;
+}
+
+/* Profile Image */
+#profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #004d4d;
+    margin-bottom: 2rem;
+}
+
+/* Profile Info */
+.profile-info {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.profile-info div {
+    margin-bottom: 1rem;
+}
+
+.profile-info span {
+    font-weight: bold;
+    color: #004d4d;
+}
+
+.profile-info span:last-child {
+    color: #7f8c8d;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    background-color: #004d4d;
+    color: #f2f2f2;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #006666;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+   /* Profile Image */
+/* Profile Image */
+#profile-img {
+    width: 200px; /* Increased size */
+    height: 200px; /* Increased size */
+    border-radius: 50%; /* Keeps it circular */
+    object-fit: cover;
+    border: 3px solid #004d4d;
+    margin-bottom: 2rem;
+}
+
+
+
+    .profile-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-info {
+        font-size: 1rem;
+    }
+
+    .back-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

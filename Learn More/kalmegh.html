@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalmegh Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/kalmegh.jpg" alt="Kalmegh Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Kalmegh</h2>
+            <p><strong>Scientific Name:</strong> Andrographis paniculata</p>
+            <p><strong>Common Names:</strong> Kalmegh, Green Chiretta, King of Bitters</p>
+            <p><strong>Origin:</strong> Native to India and Southeast Asia, Kalmegh grows in tropical and subtropical regions.</p>
+            <p><strong>Uses in Medicine:</strong> Kalmegh is widely used in traditional medicine for its liver detoxification and immune-boosting properties. It is also known for its potent antiviral and antimicrobial effects.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Supports liver function and helps detoxify the liver.</li>
+                    <li>Boosts the immune system and fights infections.</li>
+                    <li>Has anti-inflammatory and antioxidant properties.</li>
+                    <li>Helps in reducing fever and treating colds and flu.</li>
+                    <li>Promotes digestive health by easing constipation and indigestion.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Liver disorders:</strong> Hepatitis, jaundice, and fatty liver disease.</li>
+                    <li><strong>Infections:</strong> Colds, flu, and respiratory infections.</li>
+                    <li><strong>Digestive issues:</strong> Indigestion, constipation, and bloating.</li>
+                    <li><strong>Inflammation:</strong> Arthritis, joint pain, and inflammation-related disorders.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Kalmegh has been used for centuries in Ayurvedic and traditional Chinese medicine. It is highly valued for its role in detoxifying the liver and strengthening the immune system.</p>
+            <p><strong>Preparation and Dosage:</strong> Kalmegh is usually consumed in the form of capsules, powders, or extracts. It can also be made into a tea or decoction. It is advisable to consult a healthcare provider for proper dosage and usage.</p>
+            <p><strong>Scientific Research:</strong> Research supports Kalmegh's potential in treating liver diseases, boosting immunity, and its antiviral properties. Studies have also shown its ability to reduce inflammation and support digestive health.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

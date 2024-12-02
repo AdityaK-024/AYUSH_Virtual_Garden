@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhringraj Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/bhringraj.jpg" alt="Bhringraj Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Bhringraj</h2>
+            <p><strong>Scientific Name:</strong> Eclipta prostrata</p>
+            <p><strong>Common Names:</strong> Bhringraj, False Daisy, King of Hair</p>
+            <p><strong>Origin:</strong> Native to India, Bhringraj is widely found in tropical and subtropical regions around the world.</p>
+            <p><strong>Uses in Medicine:</strong> Bhringraj has been used for centuries in Ayurvedic medicine to treat a variety of conditions, especially related to hair care, liver health, and skin. It is known for its rejuvenating properties and is often used as a tonic to promote vitality.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Promotes hair growth and prevents hair loss.</li>
+                    <li>Improves liver function and detoxifies the body.</li>
+                    <li>Supports skin health by treating conditions like acne and eczema.</li>
+                    <li>Enhances memory and cognitive function.</li>
+                    <li>Reduces stress and promotes relaxation by balancing the nervous system.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Hair loss:</strong> Promotes hair growth and prevents premature graying.</li>
+                    <li><strong>Liver diseases:</strong> Helps in detoxification and supports liver function.</li>
+                    <li><strong>Skin conditions:</strong> Acne, eczema, and other skin irritations.</li>
+                    <li><strong>Stress and anxiety:</strong> Helps in calming the nervous system and reducing stress.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Bhringraj is often referred to as the "King of Hair" in Ayurveda due to its effectiveness in promoting hair growth and improving hair health. It has been used for centuries to treat liver disorders and to rejuvenate the body and mind.</p>
+            <p><strong>Preparation and Dosage:</strong> Bhringraj can be used in various forms including powder, oil, and extract. It is often applied topically as an oil to promote hair growth or consumed as a tonic to enhance overall health. The leaves of the plant are commonly used in Ayurvedic remedies.</p>
+            <p><strong>Scientific Research:</strong> Studies have shown that Bhringraj has hepatoprotective properties, meaning it helps protect the liver from damage. Research also supports its use in promoting hair growth and treating scalp issues. Its antioxidant properties also contribute to overall wellness.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

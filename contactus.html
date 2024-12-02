@@ -80,5 +80,34 @@
         </div>
     </footer>
     <script src="myprofile.js"></script>
+    <script>
+        // Function to handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const formData = new FormData(this);
+            const formObject = {};
+            formData.forEach((value, key) => formObject[key] = value);
+    
+            // Send form data to the server using fetch
+            fetch('/contactus', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formObject),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                document.getElementById('contactForm').reset(); // Reset form fields
+            })
+            .catch(error => {
+                alert('There was an error submitting the form');
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    
 </body>
 </html>

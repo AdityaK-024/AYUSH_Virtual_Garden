@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haritaki Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/haritaki.jpg" alt="Haritaki Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Haritaki</h2>
+            <p><strong>Scientific Name:</strong> Terminalia chebula</p>
+            <p><strong>Common Names:</strong> Haritaki, Chebulic Myrobalan, Indian Olive, Kadukkai</p>
+            <p><strong>Origin:</strong> Native to Southeast Asia, particularly India, and found throughout tropical and subtropical regions.</p>
+            <p><strong>Uses in Medicine:</strong> Haritaki is widely used in Ayurvedic medicine for its rejuvenating and detoxifying properties. It is known to promote digestive health, support immune function, and improve overall vitality.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Supports digestive health by improving bowel movement and detoxifying the body.</li>
+                    <li>Boosts the immune system and helps fight infections.</li>
+                    <li>Improves skin health by reducing acne, pimples, and blemishes.</li>
+                    <li>Acts as a natural detoxifier and helps in removing toxins from the body.</li>
+                    <li>Promotes heart health by improving circulation and reducing cholesterol levels.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Digestive disorders:</strong> Constipation, indigestion, and bloating.</li>
+                    <li><strong>Skin issues:</strong> Acne, pimples, and skin infections.</li>
+                    <li><strong>Detoxification:</strong> Purifies the body by eliminating toxins.</li>
+                    <li><strong>Cardiovascular health:</strong> Helps in controlling cholesterol and improving heart health.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Haritaki has been revered in Ayurveda for its ability to promote longevity and improve vitality. It is considered one of the three ingredients in the famous Ayurvedic formulation Triphala, which is used for detoxification and overall health.</p>
+            <p><strong>Preparation and Dosage:</strong> Haritaki is commonly available in powdered form, capsules, and as a juice. It can be taken with warm water, honey, or ghee. It is essential to start with a small dosage and gradually increase, as Haritaki has strong detoxifying effects.</p>
+            <p><strong>Scientific Research:</strong> Research supports the use of Haritaki for promoting digestive health, improving heart function, and detoxifying the body. Studies also show its antibacterial and antiviral properties, which help boost the immune system and prevent infections.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

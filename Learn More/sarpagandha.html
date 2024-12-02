@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarpagandha Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/sarpagandha.jpg" alt="Sarpagandha" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Sarpagandha</h2>
+            <p><strong>Scientific Name:</strong> Rauvolfia serpentina</p>
+            <p><strong>Common Names:</strong> Indian Snakeroot, Sarpagandha, Rauwolfia</p>
+            <p><strong>Origin:</strong> Native to the Indian subcontinent and Southeast Asia, particularly found in the forests of India, Sri Lanka, and Thailand.</p>
+            <p><strong>Uses in Medicine:</strong> Sarpagandha is highly valued in traditional medicine for its calming and anti-hypertensive properties. It is used to treat high blood pressure, anxiety, and as a sedative. The roots of the plant contain alkaloids that are effective in reducing blood pressure and treating other nervous system disorders.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Helps reduce high blood pressure and treats hypertension.</li>
+                    <li>Acts as a natural sedative, calming anxiety and promoting better sleep.</li>
+                    <li>Improves symptoms of insomnia and other sleep disorders.</li>
+                    <li>Has anti-inflammatory properties, which help with conditions like arthritis.</li>
+                    <li>Supports heart health by improving circulation and reducing stress.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Hypertension:</strong> Reduces high blood pressure, preventing cardiovascular diseases.</li>
+                    <li><strong>Anxiety and Stress:</strong> Acts as a natural tranquilizer to calm the nervous system.</li>
+                    <li><strong>Insomnia:</strong> Helps improve sleep patterns and reduce symptoms of insomnia.</li>
+                    <li><strong>Neurological disorders:</strong> Supports brain function and mental clarity.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Sarpagandha has been an important herb in traditional Ayurvedic and Siddha medicine, particularly for its calming effects on the nervous system and its use in controlling blood pressure.</p>
+            <p><strong>Preparation and Dosage:</strong> Sarpagandha is typically used in the form of powders, capsules, or extracts. It is important to use it under the supervision of a healthcare professional due to its potent effects on the cardiovascular and nervous systems.</p>
+            <p><strong>Scientific Research:</strong> Studies have shown that Sarpagandha's alkaloids, especially reserpine, are effective in lowering blood pressure and reducing symptoms of anxiety and insomnia. Research also supports its role in managing stress-related disorders and improving overall well-being.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

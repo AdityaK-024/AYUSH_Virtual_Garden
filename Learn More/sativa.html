@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sativa Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/sativa.jpg" alt="Sativa Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Sativa</h2>
+            <p><strong>Scientific Name:</strong> Cannabis sativa</p>
+            <p><strong>Common Names:</strong> Hemp, Marijuana, Cannabis</p>
+            <p><strong>Origin:</strong> Native to Central Asia, Cannabis sativa is now cultivated globally, particularly in temperate regions for its industrial, medicinal, and recreational purposes.</p>
+            <p><strong>Uses in Medicine:</strong> Sativa is primarily known for its medicinal uses, especially for pain relief, anxiety reduction, and appetite stimulation. Its chemical compounds, notably cannabinoids like THC and CBD, have therapeutic effects in the treatment of a variety of conditions, including chronic pain, anxiety, and nausea.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Relieves chronic pain and inflammation.</li>
+                    <li>Reduces anxiety and stress.</li>
+                    <li>Stimulates appetite, especially in cancer or AIDS patients.</li>
+                    <li>Improves sleep in people with insomnia.</li>
+                    <li>Helps with muscle spasms and neurological disorders.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Chronic pain:</strong> Sativa has pain-relieving properties that help manage conditions such as arthritis and fibromyalgia.</li>
+                    <li><strong>Anxiety and stress:</strong> Reduces anxiety and promotes relaxation through its calming effects.</li>
+                    <li><strong>Appetite loss:</strong> Often used to stimulate appetite in cancer and AIDS patients.</li>
+                    <li><strong>Sleep disorders:</strong> Helps improve sleep quality in people with insomnia or sleep disturbances.</li>
+                    <li><strong>Neurological disorders:</strong> Assists in treating conditions like epilepsy and multiple sclerosis by reducing muscle spasms and seizures.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Cannabis sativa has been used for thousands of years in various cultures for medicinal, recreational, and industrial purposes. Its use in traditional medicine dates back to ancient civilizations in Asia, where it was valued for its ability to alleviate pain and improve sleep.</p>
+            <p><strong>Preparation and Dosage:</strong> Sativa is consumed in various forms, including dried flowers, oils, tinctures, and edibles. It is crucial to use medical cannabis under the supervision of a healthcare provider, especially considering the varying concentrations of THC and CBD in different strains.</p>
+            <p><strong>Scientific Research:</strong> Studies have confirmed the therapeutic effects of cannabinoids in Sativa, particularly its ability to manage chronic pain, anxiety, and sleep disorders. Research also suggests that CBD, a non-psychoactive compound in Sativa, has anti-inflammatory and neuroprotective effects, making it valuable in treating conditions like epilepsy and Parkinson's disease.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

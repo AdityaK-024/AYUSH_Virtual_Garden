@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashoka Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/ashoka.jpg" alt="Ashoka Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Ashoka</h2>
+            <p><strong>Scientific Name:</strong> Saraca asoca</p>
+            <p><strong>Common Names:</strong> Ashoka, Sorrowless Tree</p>
+            <p><strong>Origin:</strong> Native to the Indian subcontinent, especially found in India, Nepal, Sri Lanka, and parts of Southeast Asia.</p>
+            <p><strong>Uses in Medicine:</strong> Ashoka is widely used in traditional Ayurvedic medicine for its healing properties. It is known for its benefits in treating menstrual issues, uterine health, and inflammation. The bark, leaves, and flowers are used for medicinal preparations.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Helps in regulating menstrual cycles and easing menstrual cramps.</li>
+                    <li>Supports uterine health and treats conditions such as fibroids and leucorrhea.</li>
+                    <li>Acts as an anti-inflammatory and can help treat inflammation-related conditions.</li>
+                    <li>Improves skin health and treats conditions such as acne and pimples.</li>
+                    <li>Boosts heart health by reducing stress and promoting overall well-being.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Gynecological conditions:</strong> Menstrual disorders, irregular periods, excessive bleeding, and uterine health issues.</li>
+                    <li><strong>Skin conditions:</strong> Acne, pimples, and skin inflammation.</li>
+                    <li><strong>Digestive health:</strong> Helps with digestive problems and provides relief from constipation.</li>
+                    <li><strong>Heart health:</strong> Reduces stress and improves cardiovascular health.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> In India, Ashoka is regarded as a symbol of love and fertility. It is also considered sacred in Hinduism and is often planted near temples and places of worship for its auspicious properties. The Ashoka tree is also associated with happiness and is believed to bring peace to its surroundings.</p>
+            <p><strong>Preparation and Dosage:</strong> Ashoka is typically consumed in the form of a powder, decoction, or paste made from its bark, flowers, or leaves. It is often prescribed in Ayurvedic medicine for internal use or applied topically for skin issues.</p>
+            <p><strong>Scientific Research:</strong> Research has supported Ashoka’s role in treating gynecological disorders and its anti-inflammatory properties. Studies also suggest it has potential antioxidant and antimicrobial effects, contributing to its wide range of medicinal uses.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

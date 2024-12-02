@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giloy Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/giloy.jpg" alt="Giloy Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Giloy</h2>
+            <p><strong>Scientific Name:</strong> Tinospora cordifolia</p>
+            <p><strong>Common Names:</strong> Giloy, Guduchi, Amrita</p>
+            <p><strong>Origin:</strong> Native to India, Giloy is widely found in tropical and subtropical regions across Asia.</p>
+            <p><strong>Uses in Medicine:</strong> Giloy is a powerful herb used in Ayurvedic medicine to boost immunity, fight infections, and treat a variety of health conditions. It has anti-inflammatory, antioxidant, and antipyretic properties, making it useful in treating fever and boosting overall health.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Boosts immunity by enhancing the body’s defense mechanisms.</li>
+                    <li>Helps in treating fever, particularly in conditions like malaria and dengue.</li>
+                    <li>Reduces inflammation and has pain-relieving effects.</li>
+                    <li>Improves digestive health and alleviates constipation.</li>
+                    <li>Supports liver health by detoxifying the liver and enhancing its functions.</li>
+                    <li>Has anti-aging properties and helps maintain youthful skin.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Fever:</strong> Particularly helpful in treating viral and bacterial fevers like malaria and dengue.</li>
+                    <li><strong>Digestive issues:</strong> Alleviates indigestion, constipation, and enhances liver health.</li>
+                    <li><strong>Immunity:</strong> Increases the body’s resistance to infections and diseases.</li>
+                    <li><strong>Skin disorders:</strong> Helps in treating conditions like acne and skin rashes.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> Giloy has been used in traditional Ayurvedic medicine for thousands of years. It is considered a potent herb to maintain overall health and longevity. It is often referred to as "Amrita" or "the root of immortality" in ancient texts.</p>
+            <p><strong>Preparation and Dosage:</strong> Giloy is available in various forms, including powders, capsules, tablets, and syrups. The stem of the plant is commonly used for medicinal preparations. It can be consumed in the form of a juice, decoction, or as a supplement in powder or capsule form.</p>
+            <p><strong>Scientific Research:</strong> Numerous studies have confirmed the medicinal properties of Giloy, especially its immune-boosting, anti-inflammatory, and anti-viral effects. Research suggests that Giloy may also have benefits for diabetes management, liver health, and as an antioxidant to fight oxidative stress.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>

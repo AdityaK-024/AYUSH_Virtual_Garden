@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankhpushpi Information</title>
+    <link rel="stylesheet" href="learnmore.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../medicinalplant.html">Medicinal Plants</a>
+        <a href="../quizzes.html">Quizzes</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+        <!-- Profile dropdown on the far right -->
+        <div id="profile-container">
+            <div id="profile-icon" onclick="toggleDropdown()"> <!-- Trigger dropdown on click -->
+                <img id="profile-image" src="../Images/Defualt.jpg" alt="Profile Picture">
+            </div>
+            <div id="dropdown-menu">
+                <div id="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Settings</a>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+         <!-- Login / My Profile button (visible when not logged in) -->
+        <div id="login-link-container">
+            <div id="dropdown-menu">
+                <button id="dropdown-btn" onclick="window.location.href='login.html'">Login</button> <!-- Redirect to login page -->
+            </div>
+        </div>    
+    </nav>
+    
+    <!-- Plant Information Section -->
+    <section class="plant-info">
+        <img src="../Images/shankhpushpi.jpg" alt="Shankhpushpi Plant" class="plant-img">
+
+        <!-- Description below the image -->
+        <div class="description">
+            <h2>Plant Name: Shankhpushpi</h2>
+            <p><strong>Scientific Name:</strong> Convolvulus pluricaulis</p>
+            <p><strong>Common Names:</strong> Shankhpushpi, Remani, Anantamul, Vidhari</p>
+            <p><strong>Origin:</strong> Shankhpushpi is native to India and can be found in tropical regions, particularly in the plains and foothills.</p>
+            <p><strong>Uses in Medicine:</strong> Shankhpushpi is renowned for its memory-boosting and cognitive-enhancing properties. It is often used in Ayurvedic medicine to improve mental clarity, concentration, and overall brain function.</p>
+            <p><strong>Health Benefits:</strong> 
+                <ul>
+                    <li>Improves memory, concentration, and cognitive abilities.</li>
+                    <li>Reduces stress and promotes mental relaxation.</li>
+                    <li>Supports nervous system health and prevents nerve degeneration.</li>
+                    <li>Enhances learning ability and mental performance.</li>
+                    <li>Has calming effects, helping in managing anxiety and mental exhaustion.</li>
+                </ul>
+            </p>
+            <p><strong>Helps in These Diseases:</strong>
+                <ul>
+                    <li><strong>Cognitive disorders:</strong> Memory loss, stress, and anxiety.</li>
+                    <li><strong>Neurological health:</strong> Brain function and neuroprotection.</li>
+                    <li><strong>Mental fatigue:</strong> Improves mental exhaustion and enhances focus.</li>
+                </ul>
+            </p>
+            <p><strong>Traditional and Cultural Significance:</strong> In Ayurvedic medicine, Shankhpushpi is considered an essential herb for promoting mental health and is used as a tonic for the brain. It has been used for centuries to improve intellect and treat various mental ailments.</p>
+            <p><strong>Preparation and Dosage:</strong> Shankhpushpi can be taken in the form of powder, syrup, or as an ingredient in herbal teas. The recommended dosage depends on the preparation, and it is best to consult a healthcare provider before use.</p>
+            <p><strong>Scientific Research:</strong> Studies suggest that Shankhpushpi has strong neuroprotective effects and can help improve cognitive functions like memory, learning, and attention span. Research also supports its role in reducing stress and promoting mental clarity.</p>
+        </div>
+    </section>
+    <script src="../myprofile.js"></script>
+</body>
+</html>
